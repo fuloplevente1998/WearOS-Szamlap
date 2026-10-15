@@ -46,6 +46,15 @@ helyi jelentéssel és sikeres GitHub-kapuval publikál. Ellenőrzi az APK hash�
 a tesztaláírás folytonosságát és a `-test` verziót. Mindig prerelease-t készít,
 SHA-256 fájllal és jelentéssel. Meglévő kiadást nem cserél le: új verzió szükséges.
 
+A felhő GitHub-kapcsolata az `uploads.github.com` végponton nem biztosít
+hitelesítést. Ezért a script csak a már aláírt APK-t, SHA-fájlt, jelentést és
+kiadási szöveget teszi egy külön, átmeneti `codex/release-assets-…` ágra; a main
+nem tartalmaz APK-binárisokat. Az ág pontos commitjával kézi GitHub-workflow-t
+indít. A workflow újra lefuttatja a Release gate-et, majd az aláírás és a csomag
+újbóli ellenőrzése után, saját GitHub-tokenjével feltölti a release asseteket.
+A kulcs nem hagyja el a helyi környezetet. Sikeres publikálás után kizárólag
+az adott kiadáshoz létrehozott átmeneti ág törölhető.
+
 ## Készülékes kapu és végleges kiadás
 
 A teszt-prerelease közli, hogy az új verzió Watch7-es ellenőrzése még hátravan.
