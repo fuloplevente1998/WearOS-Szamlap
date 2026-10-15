@@ -1,0 +1,102 @@
+{
+  "size": 450,
+  "backgroundShade": "#2400060b",
+  "panelRadius": 204,
+  "trackRadius": 212.7,
+  "bezelInnerRadius": 217.5,
+  "paletteConfiguration": "palette_v2",
+  "defaultPalette": "reference",
+  "palettes": {
+    "reference": {
+      "label": "Referencia \u00b7 z\u00f6ld / ci\u00e1n",
+      "colors": [
+        "#7fff89",
+        "#9ae4f5",
+        "#69ce83",
+        "#60b7d5",
+        "#7bef95"
+      ]
+    },
+    "unsc": {
+      "label": "HALO ci\u00e1n",
+      "colors": [
+        "#9de4f7",
+        "#8de6ff",
+        "#8acfe2",
+        "#60b7d5",
+        "#9de4f7"
+      ]
+    },
+    "green": {
+      "label": "HUD z\u00f6ld",
+      "colors": [
+        "#8aff9b",
+        "#8de6ff",
+        "#79d592",
+        "#60b7d5",
+        "#8aff9b"
+      ]
+    },
+    "amber": {
+      "label": "Borosty\u00e1n",
+      "colors": [
+        "#f2c27a",
+        "#b7e2ed",
+        "#cfaa6f",
+        "#79afc4",
+        "#f2c27a"
+      ]
+    }
+  },
+  "clockFrame": {
+    "rect": [
+      19,
+      151,
+      412,
+      129
+    ],
+    "outline": {
+      "d": "M 33.303 155.228 H 174.25 L 180 162 H 270 L 275.75 155.228 H 416.697 A 204 204 0 0 1 422.049 277.799 H 286.285 L 276.486 268 H 173.514 L 163.715 277.799 H 27.951 A 204 204 0 0 1 33.303 155.228 Z"
+    }
+  },
+  "time": {
+    "rect": [
+      51,
+      164,
+      306,
+      88
+    ],
+    "fontSize": 80
+  },
+  "seconds": {
+    "rect": [
+      367,
+      210,
+      48,
+      42
+    ],
+    "fontSize": 30
+  },
+  "date": {
+    "rect": [
+      100,
+      244,
+      250,
+      27
+    ],
+    "fontSize": 16
+  },
+  "fontFamily": "hud_bold",
+  "fontSizes": {
+    "caption": 16,
+    "value": 26,
+    "healthValue": 28,
+    "appValue": 18
+  },
+  "glassOpacity": [
+    0.2,
+    0.1,
+    0.16,
+    0.28
+  ]
+}

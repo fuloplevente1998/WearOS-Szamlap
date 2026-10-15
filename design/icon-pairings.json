@@ -1,0 +1,16 @@
+{
+  "heart": ["Samsung Health", "Samsung Health Monitor", "S Health", "Health", "Egészség", "Heart rate", "Heart", "Pulse", "Pulzus", "Szívritmus", "BPM", "Blood oxygen", "Véroxigén"],
+  "battery": ["Battery", "Watch battery", "Battery level", "Battery status", "Akkumulátor", "Akkumulátor állapota", "Akkumulátor töltöttsége", "Akku", "Töltöttség", "Power"],
+  "steps": ["Steps", "Step count", "Daily steps", "Lépések", "Lépésszám", "Napi lépések"],
+  "runner": ["TrainPilot", "Exercise", "Workout", "Workouts", "Training", "Activity", "Daily activity", "Sports", "Running", "Edzés", "Edzések", "Tevékenység", "Napi tevékenység", "Sport", "Futás"],
+  "weather": ["Weather", "Temperature", "Forecast", "Időjárás", "Hőmérséklet", "Előrejelzés"],
+  "alarm": ["Alarm", "Alarms", "Ébresztő", "Ébresztés"],
+  "music": ["Music", "Music player", "Media controls", "Spotify", "YouTube Music", "Zene", "Zenelejátszó", "Médiavezérlő"],
+  "calendar": ["Calendar", "Next event", "Events", "Date", "Naptár", "Következő esemény", "Események", "Dátum"],
+  "settings": ["Settings", "Beállítások"],
+  "timer": ["Timer", "Stopwatch", "Időzítő", "Stopper"],
+  "distance": ["Distance", "Route", "Navigation", "Google Maps", "Maps", "Távolság", "Útvonal", "Navigáció", "Térkép", "Térképek"],
+  "calories": ["Calories", "Active calories", "Energy", "Kalória", "Kalóriák", "Aktív kalória", "Energia"],
+  "comms": ["Phone", "Contacts", "Messages", "Notifications", "WhatsApp", "Messenger", "Telefon", "Névjegyek", "Üzenetek", "Értesítések"],
+  "radar": ["World clock", "Világóra", "Compass", "Iránytű"]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "wearos-szamlap-design-checks",
+  "private": true,
+  "scripts": {
+    "check:ui": "node scripts/render-assets.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

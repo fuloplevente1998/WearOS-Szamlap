@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 64 64"><defs><mask id="shoe"><path fill="white" d="m15 7 10 8c5 4 9 6 17 7l7 6c6 3 10 10 10 17 0 6-4 9-11 9H11c-5 0-7-3-6-8l2-10 4-8 1-15Z"/>
+      <path fill="none" stroke="black" stroke-width="3" stroke-linecap="round" d="m23 18-5 9m13-4-5 8m13-5-4 8M7 44c15 1 34 2 51-1"/>
+      </mask></defs><path fill="white" mask="url(#shoe)" d="M0 0h64v64H0Z"/></svg>

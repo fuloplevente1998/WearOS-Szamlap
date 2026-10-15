@@ -1,0 +1,379 @@
+[
+  {
+    "id": "armor",
+    "label": "01 · Bal felső",
+    "rect": [
+      32,
+      28,
+      136,
+      128
+    ],
+    "outline": {
+      "d": "M 161.961 30.984 A 204 204 0 0 0 35.854 148.580 Q 36 151 42 151 H 158 Q 166 151 166 143 V 37 Q 166 31 161.960 30.984 Z"
+    },
+    "icon": "helmet",
+    "provider": "WATCH_BATTERY",
+    "kind": "RANGED_VALUE",
+    "caption": "ARMOR",
+    "content": {
+      "caption": [
+        69,
+        23,
+        63,
+        28
+      ],
+      "icon": [
+        74,
+        45,
+        54,
+        54
+      ],
+      "value": [
+        27,
+        91,
+        106,
+        35
+      ]
+    },
+    "bounds": [
+      0,
+      0,
+      136,
+      128
+    ],
+    "outerArc": {
+      "center": [
+        225,
+        225
+      ],
+      "radius": 204,
+      "angles": [
+        202,
+        252
+      ]
+    }
+  },
+  {
+    "id": "health",
+    "label": "02 · Felső középső",
+    "rect": [
+      170,
+      20,
+      110,
+      137
+    ],
+    "outline": {
+      "d": "M 172.201 27.951 A 204 204 0 0 1 277.799 27.951 V 143 L 268 155 H 182 L 172.201 143 Z"
+    },
+    "icon": "heart",
+    "provider": "HEART_RATE",
+    "kind": "SHORT_TEXT",
+    "caption": "HEALTH",
+    "content": {
+      "caption": [
+        11,
+        8,
+        88,
+        32
+      ],
+      "icon": [
+        28,
+        36,
+        54,
+        54
+      ],
+      "value": [
+        6,
+        88,
+        98,
+        44
+      ]
+    },
+    "bounds": [
+      0,
+      0,
+      110,
+      137
+    ],
+    "outerArc": {
+      "center": [
+        225,
+        225
+      ],
+      "radius": 204,
+      "angles": [
+        255,
+        285
+      ]
+    }
+  },
+  {
+    "id": "radar",
+    "label": "03 · Jobb felső",
+    "rect": [
+      282,
+      28,
+      136,
+      128
+    ],
+    "outline": {
+      "d": "M 161.961 30.984 A 204 204 0 0 0 35.854 148.580 Q 36 151 42 151 H 158 Q 166 151 166 143 V 37 Q 166 31 161.960 30.984 Z",
+      "transform": "translate(450 0) scale(-1 1)"
+    },
+    "icon": "radar",
+    "provider": "WORLD_CLOCK",
+    "kind": "SHORT_TEXT",
+    "caption": "WORLD",
+    "content": {
+      "caption": [
+        4,
+        23,
+        63,
+        28
+      ],
+      "icon": [
+        8,
+        45,
+        54,
+        54
+      ],
+      "value": [
+        3,
+        91,
+        106,
+        35
+      ]
+    },
+    "bounds": [
+      0,
+      0,
+      136,
+      128
+    ],
+    "outerArc": {
+      "center": [
+        225,
+        225
+      ],
+      "radius": 204,
+      "angles": [
+        288,
+        338
+      ]
+    }
+  },
+  {
+    "id": "steps",
+    "label": "04 · Bal alsó",
+    "rect": [
+      25,
+      278,
+      137,
+      118
+    ],
+    "outline": {
+      "d": "M 28.903 281.230 H 145 Q 151 281.230 151 287 V 333.8 L 159 343.8 V 383 Q 159 393 149 393 H 111 L 105.092 390.039 A 204 204 0 0 1 28.903 281.230 Z"
+    },
+    "icon": "steps",
+    "provider": "STEP_COUNT",
+    "kind": "SHORT_TEXT",
+    "caption": "ACTIVITY",
+    "content": {
+      "caption": [
+        34,
+        0,
+        94,
+        28
+      ],
+      "icon": [
+        67,
+        18,
+        50,
+        50
+      ],
+      "value": [
+        53,
+        52,
+        76,
+        44
+      ]
+    },
+    "bounds": [
+      0,
+      0,
+      137,
+      118
+    ],
+    "outerArc": {
+      "center": [
+        225,
+        225
+      ],
+      "radius": 204,
+      "angles": [
+        126,
+        158
+      ]
+    }
+  },
+  {
+    "id": "training",
+    "label": "05 · Középső gomb",
+    "rect": [
+      157,
+      272,
+      136,
+      124
+    ],
+    "outline": {
+      "d": "M 176 274 H 274 L 291 291 V 331 L 283 341 V 377 L 268 392 H 182 L 167 377 V 341 L 159 331 V 291 Z"
+    },
+    "icon": "runner",
+    "provider": "APP_SHORTCUT",
+    "kind": "LONG_TEXT",
+    "caption": "APP",
+    "content": {
+      "caption": [
+        6,
+        4,
+        124,
+        30
+      ],
+      "icon": [
+        40,
+        28,
+        56,
+        56
+      ],
+      "value": [
+        7,
+        79,
+        122,
+        36
+      ]
+    },
+    "bounds": [
+      0,
+      0,
+      136,
+      124
+    ]
+  },
+  {
+    "id": "battery",
+    "label": "06 · Jobb alsó",
+    "rect": [
+      288,
+      278,
+      137,
+      118
+    ],
+    "outline": {
+      "d": "M 28.903 281.230 H 145 Q 151 281.230 151 287 V 333.8 L 159 343.8 V 383 Q 159 393 149 393 H 111 L 105.092 390.039 A 204 204 0 0 1 28.903 281.230 Z",
+      "transform": "translate(450 0) scale(-1 1)"
+    },
+    "icon": "battery",
+    "provider": "WATCH_BATTERY",
+    "kind": "SHORT_TEXT",
+    "caption": "POWER",
+    "content": {
+      "caption": [
+        9,
+        0,
+        94,
+        28
+      ],
+      "icon": [
+        20,
+        18,
+        50,
+        50
+      ],
+      "value": [
+        8,
+        52,
+        76,
+        44
+      ]
+    },
+    "bounds": [
+      0,
+      0,
+      137,
+      118
+    ],
+    "outerArc": {
+      "center": [
+        225,
+        225
+      ],
+      "radius": 204,
+      "angles": [
+        22,
+        54
+      ]
+    }
+  },
+  {
+    "id": "quick_left",
+    "label": "07 · Bal gyorsgomb",
+    "rect": [
+      159,
+      397,
+      62,
+      38
+    ],
+    "outline": {
+      "d": "M 217.776 431.874 A 207 207 0 0 1 161.033 421.869 L 168.450 399.043 A 183 183 0 0 0 218.613 407.889 Z"
+    },
+    "icon": "target",
+    "provider": "APP_SHORTCUT",
+    "kind": "LONG_TEXT",
+    "caption": "APP",
+    "content": {
+      "icon": [
+        24,
+        3,
+        28,
+        28
+      ]
+    },
+    "bounds": [
+      0,
+      0,
+      62,
+      38
+    ]
+  },
+  {
+    "id": "quick_right",
+    "label": "08 · Jobb gyorsgomb",
+    "rect": [
+      229,
+      397,
+      62,
+      38
+    ],
+    "outline": {
+      "d": "M 288.967 421.869 A 207 207 0 0 1 232.224 431.874 L 231.387 407.889 A 183 183 0 0 0 281.550 399.043 Z"
+    },
+    "icon": "telemetry",
+    "provider": "APP_SHORTCUT",
+    "kind": "LONG_TEXT",
+    "caption": "APP",
+    "content": {
+      "icon": [
+        10,
+        3,
+        28,
+        28
+      ]
+    },
+    "bounds": [
+      0,
+      0,
+      62,
+      38
+    ]
+  }
+]
