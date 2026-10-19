@@ -1,10 +1,10 @@
 {
   "wff-validator.jar": {
     "url": "https://github.com/google/watchface/releases/download/release/wff-validator.jar",
-    "sha256": "28b244289ab748bb2b07017e9f3c06bb76bdf165d6fa55652a5dc64b852c3121"
+    "sha256": "fb3262aa146de24c169a1d451901b4df2bfedca28a27c3c168a487e02d393771"
   },
   "memory-footprint.jar": {
     "url": "https://github.com/google/watchface/releases/download/release/memory-footprint.jar",
-    "sha256": "6a5aa266821562d264859d09be6b771a509c478370fbc0c2336d4ed4c0ca5890"
+    "sha256": "98892722dcb0cf3c872776fa5ec1ba5aea1289621f04d15324e854b1cdaa3460"
   }
 }

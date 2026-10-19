@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 450" width="450" height="450">
+      <defs>
+        <radialGradient id="ringGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="70%" stop-color="#000" stop-opacity="0"/>
+          <stop offset="85%" stop-color="#ff8c00" stop-opacity="0.3"/>
+          <stop offset="92%" stop-color="#ffaa00" stop-opacity="0.6"/>
+          <stop offset="98%" stop-color="#ff8c00" stop-opacity="0.1"/>
+          <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+        </radialGradient>
+        <filter id="glowFilter" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="2.5" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <path id="textPathOuter" d="M 225,225 m -185,0 a 185,185 0 1,1 370,0 a 185,185 0 1,1 -370,0" />
+        <path id="textPathInner" d="M 225,225 m -160,0 a 160,160 0 1,0 320,0 a 160,160 0 1,0 -320,0" />
+      </defs>
+
+      <circle cx="225" cy="225" r="225" fill="url(#ringGlow)" />
+      <circle cx="225" cy="225" r="185" stroke="#ffaa00" stroke-width="1.5" fill="none" opacity="0.4" />
+      <circle cx="225" cy="225" r="162" stroke="#ff8c00" stroke-width="1.5" fill="none" opacity="0.4" />
+
+      <g filter="url(#glowFilter)">
+        <text fill="#ffd700" font-family="serif" font-weight="bold" font-size="16" letter-spacing="3">
+          <textPath href="#textPathOuter" startOffset="0%">
+            Ash nazg durbatulûk, ash nazg gimbatul, ash nazg thrakatulûk agh burzum-ishi krimpatul.
+          </textPath>
+        </text>
+        <text fill="#ffe4b5" font-family="serif" font-weight="bold" font-size="14" letter-spacing="2" opacity="0.85">
+          <textPath href="#textPathInner" startOffset="0%">
+            One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them.
+          </textPath>
+        </text>
+      </g>
+    </svg>
