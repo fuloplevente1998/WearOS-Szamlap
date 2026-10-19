@@ -1,5 +1,38 @@
 # Fejlesztőkörnyezet
 
+## Jules: környezet és tesztszintek
+
+A **Jules Initial Setup** csak a függőségeket és az Android SDK-t telepítse,
+majd legfeljebb a `./gradlew --version` parancsot futtassa. **Ne fusson benne**
+a `bash scripts/verify.sh`: ez a Google változó `release` címkéjéről tölt
+eszközöket, ezért egy külső kiadásváltozás blokkolná a Jules snapshot készítését.
+
+A Jules feladatban, a kívánt fejlesztési ág checkoutja után:
+
+```bash
+# Csak WFF XML, erőforrások, panelvágás, ikonlogika és WFF 2 séma:
+bash scripts/verify-fast.sh
+
+# Kiadás előtti teljes ellenőrzés + a nem frissítéskompatibilis
+# ideiglenes cloud/debug aláírás kötelező ellenőrzése:
+bash scripts/verify-jules.sh
+```
+
+A helyi, megbízható tesztaláíró környezetben a teljes kapu továbbra is
+`bash scripts/verify.sh`. A Jules semmilyen módon nem kaphatja meg a megtartott
+tesztkulcsot vagy annak jelszavát, és nem publikálhat APK-t.
+
+A Google WFF JAR-ok letöltése SHA-256 ellenőrzött: a kiadási címke
+2026-10-16-án megváltozott, ezért a két érték frissítve lett a Google által
+közzétett release-asset digest alapján. Ha a Google újra cseréli őket,
+a letöltést szándékosan meg kell állítani és a forrást újra ellenőrizni;
+a checksum-védelmet nem szabad kikapcsolni.
+
+A GitHub Actions Node.js 20 deprecációs figyelmeztetéseinek és a rögzített
+action-verzióknak a felülvizsgálata későbbi, külön feladat. A jelenlegi
+CI Release gate változatlan maradt.
+
+
 ## APK és ellenőrzések
 
 Szükséges: JDK 21, Python 3.11+, Node 24, Chromium/Chrome, Android SDK 36, Build Tools 36.0.0,
