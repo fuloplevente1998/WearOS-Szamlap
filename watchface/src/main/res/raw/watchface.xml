@@ -36,61 +36,76 @@
 
     <!-- Center Digital Date & Time -->
     <Group name="center_digital" x="125" y="115" width="200" height="60">
-      <PartText x="0" y="0" width="200" height="24" alignment="CENTER">
-        <Text>
-          <Template>%s</Template>
-          <Parameter expression="[DAY_OF_WEEK_S] + ' ' + [DAY_IN_MONTH]" />
+      <PartText x="0" y="0" width="200" height="24">
+        <Text align="CENTER">
+          <Font family="hud_bold" size="14" color="#ffd700">
+            <Template>%s
+              <Parameter expression="[DAY_OF_WEEK_S] + ' ' + [DAY_IN_MONTH]" />
+            </Template>
+          </Font>
         </Text>
-        <Font family="hud_bold" size="14" color="#ffd700">
-          <Variant mode="AMBIENT" target="color" value="#cccccc" />
-        </Font>
       </PartText>
-      <PartText x="0" y="24" width="200" height="36" alignment="CENTER">
-        <Text>
-          <Template>%s:%s</Template>
-          <Parameter expression="[HOUR_0_23_Z]" />
-          <Parameter expression="[MINUTE_Z]" />
+      <PartText x="0" y="24" width="200" height="36">
+        <Text align="CENTER">
+          <Font family="hud_bold" size="26" color="#ffaa00">
+            <Template>%s:%s
+              <Parameter expression="[HOUR_0_23_Z]" />
+              <Parameter expression="[MINUTE_Z]" />
+            </Template>
+          </Font>
         </Text>
-        <Font family="hud_bold" size="26" color="#ffaa00">
-          <Variant mode="AMBIENT" target="color" value="#ffffff" />
-        </Font>
       </PartText>
     </Group>
 
     <!-- 8 Complication Slots -->
     <!-- Slot 01: Top Slot -->
-    <ComplicationSlot id="0" x="175" y="45" width="100" height="60" slotId="1" supportedTypes="LONG_TEXT SHORT_TEXT RANGED_VALUE EMPTY" displayName="top_slot">
+    <ComplicationSlot x="175" y="45" width="100" height="60" slotId="0" supportedTypes="LONG_TEXT SHORT_TEXT RANGED_VALUE EMPTY" displayName="top_slot">
       <BoundingBox x="0" y="0" width="100" height="60" />
       <Variant mode="AMBIENT" target="alpha" value="180" />
       <Complication type="SHORT_TEXT">
-        <Group x="0" y="0" width="100" height="60">
-          <PartText x="0" y="10" width="100" height="20" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TITLE]" /></Text>
-            <Font family="hud_bold" size="12" color="#a86528" />
+        <Group name="slot_0_short_text" x="0" y="0" width="100" height="60">
+          <PartText x="0" y="10" width="100" height="20">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="12" color="#a86528">
+                <Template>%s<Parameter expression="[COMPLICATION.TITLE]" /></Template>
+              </Font>
+            </Text>
           </PartText>
-          <PartText x="0" y="30" width="100" height="25" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TEXT]" /></Text>
-            <Font family="hud_bold" size="16" color="#ffd700" />
+          <PartText x="0" y="30" width="100" height="25">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="16" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+              </Font>
+            </Text>
           </PartText>
         </Group>
       </Complication>
       <Complication type="LONG_TEXT">
-        <Group x="0" y="0" width="100" height="60">
-          <PartText x="0" y="10" width="100" height="20" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TITLE]" /></Text>
-            <Font family="hud_bold" size="12" color="#a86528" />
+        <Group name="slot_0_long_text" x="0" y="0" width="100" height="60">
+          <PartText x="0" y="10" width="100" height="20">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="12" color="#a86528">
+                <Template>%s<Parameter expression="[COMPLICATION.TITLE]" /></Template>
+              </Font>
+            </Text>
           </PartText>
-          <PartText x="0" y="30" width="100" height="25" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TEXT]" /></Text>
-            <Font family="hud_bold" size="14" color="#ffd700" />
+          <PartText x="0" y="30" width="100" height="25">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="14" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+              </Font>
+            </Text>
           </PartText>
         </Group>
       </Complication>
       <Complication type="RANGED_VALUE">
-        <Group x="0" y="0" width="100" height="60">
-          <PartText x="0" y="15" width="100" height="30" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TEXT]" /></Text>
-            <Font family="hud_bold" size="16" color="#ffd700" />
+        <Group name="slot_0_ranged_value" x="0" y="0" width="100" height="60">
+          <PartText x="0" y="15" width="100" height="30">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="16" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+              </Font>
+            </Text>
           </PartText>
         </Group>
       </Complication>
@@ -98,38 +113,53 @@
     </ComplicationSlot>
 
     <!-- Slot 02: Bottom Slot -->
-    <ComplicationSlot id="1" x="125" y="325" width="200" height="60" slotId="2" supportedTypes="LONG_TEXT SHORT_TEXT RANGED_VALUE EMPTY" displayName="bottom_slot">
+    <ComplicationSlot x="125" y="325" width="200" height="60" slotId="1" supportedTypes="LONG_TEXT SHORT_TEXT RANGED_VALUE EMPTY" displayName="bottom_slot">
       <BoundingBox x="0" y="0" width="200" height="60" />
       <Variant mode="AMBIENT" target="alpha" value="180" />
       <Complication type="SHORT_TEXT">
-        <Group x="0" y="0" width="200" height="60">
-          <PartText x="0" y="10" width="200" height="20" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TITLE]" /></Text>
-            <Font family="hud_bold" size="12" color="#a86528" />
+        <Group name="slot_1_short_text" x="0" y="0" width="200" height="60">
+          <PartText x="0" y="10" width="200" height="20">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="12" color="#a86528">
+                <Template>%s<Parameter expression="[COMPLICATION.TITLE]" /></Template>
+              </Font>
+            </Text>
           </PartText>
-          <PartText x="0" y="30" width="200" height="25" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TEXT]" /></Text>
-            <Font family="hud_bold" size="16" color="#ffd700" />
+          <PartText x="0" y="30" width="200" height="25">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="16" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+              </Font>
+            </Text>
           </PartText>
         </Group>
       </Complication>
       <Complication type="LONG_TEXT">
-        <Group x="0" y="0" width="200" height="60">
-          <PartText x="0" y="10" width="200" height="20" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TITLE]" /></Text>
-            <Font family="hud_bold" size="12" color="#a86528" />
+        <Group name="slot_1_long_text" x="0" y="0" width="200" height="60">
+          <PartText x="0" y="10" width="200" height="20">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="12" color="#a86528">
+                <Template>%s<Parameter expression="[COMPLICATION.TITLE]" /></Template>
+              </Font>
+            </Text>
           </PartText>
-          <PartText x="0" y="30" width="200" height="25" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TEXT]" /></Text>
-            <Font family="hud_bold" size="14" color="#ffd700" />
+          <PartText x="0" y="30" width="200" height="25">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="14" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+              </Font>
+            </Text>
           </PartText>
         </Group>
       </Complication>
       <Complication type="RANGED_VALUE">
-        <Group x="0" y="0" width="200" height="60">
-          <PartText x="0" y="15" width="200" height="30" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TEXT]" /></Text>
-            <Font family="hud_bold" size="16" color="#ffd700" />
+        <Group name="slot_1_ranged_value" x="0" y="0" width="200" height="60">
+          <PartText x="0" y="15" width="200" height="30">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="16" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+              </Font>
+            </Text>
           </PartText>
         </Group>
       </Complication>
@@ -137,38 +167,53 @@
     </ComplicationSlot>
 
     <!-- Slot 03: Left Slot -->
-    <ComplicationSlot id="2" x="55" y="195" width="100" height="60" slotId="3" supportedTypes="LONG_TEXT SHORT_TEXT RANGED_VALUE EMPTY" displayName="left_slot">
+    <ComplicationSlot x="55" y="195" width="100" height="60" slotId="2" supportedTypes="LONG_TEXT SHORT_TEXT RANGED_VALUE EMPTY" displayName="left_slot">
       <BoundingBox x="0" y="0" width="100" height="60" />
       <Variant mode="AMBIENT" target="alpha" value="180" />
       <Complication type="SHORT_TEXT">
-        <Group x="0" y="0" width="100" height="60">
-          <PartText x="0" y="10" width="100" height="20" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TITLE]" /></Text>
-            <Font family="hud_bold" size="11" color="#a86528" />
+        <Group name="slot_2_short_text" x="0" y="0" width="100" height="60">
+          <PartText x="0" y="10" width="100" height="20">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="11" color="#a86528">
+                <Template>%s<Parameter expression="[COMPLICATION.TITLE]" /></Template>
+              </Font>
+            </Text>
           </PartText>
-          <PartText x="0" y="30" width="100" height="25" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TEXT]" /></Text>
-            <Font family="hud_bold" size="15" color="#ffd700" />
+          <PartText x="0" y="30" width="100" height="25">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="15" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+              </Font>
+            </Text>
           </PartText>
         </Group>
       </Complication>
       <Complication type="LONG_TEXT">
-        <Group x="0" y="0" width="100" height="60">
-          <PartText x="0" y="10" width="100" height="20" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TITLE]" /></Text>
-            <Font family="hud_bold" size="11" color="#a86528" />
+        <Group name="slot_2_long_text" x="0" y="0" width="100" height="60">
+          <PartText x="0" y="10" width="100" height="20">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="11" color="#a86528">
+                <Template>%s<Parameter expression="[COMPLICATION.TITLE]" /></Template>
+              </Font>
+            </Text>
           </PartText>
-          <PartText x="0" y="30" width="100" height="25" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TEXT]" /></Text>
-            <Font family="hud_bold" size="13" color="#ffd700" />
+          <PartText x="0" y="30" width="100" height="25">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="13" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+              </Font>
+            </Text>
           </PartText>
         </Group>
       </Complication>
       <Complication type="RANGED_VALUE">
-        <Group x="0" y="0" width="100" height="60">
-          <PartText x="0" y="15" width="100" height="30" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TEXT]" /></Text>
-            <Font family="hud_bold" size="15" color="#ffd700" />
+        <Group name="slot_2_ranged_value" x="0" y="0" width="100" height="60">
+          <PartText x="0" y="15" width="100" height="30">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="15" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+              </Font>
+            </Text>
           </PartText>
         </Group>
       </Complication>
@@ -176,38 +221,53 @@
     </ComplicationSlot>
 
     <!-- Slot 04: Right Slot -->
-    <ComplicationSlot id="3" x="295" y="195" width="100" height="60" slotId="4" supportedTypes="LONG_TEXT SHORT_TEXT RANGED_VALUE EMPTY" displayName="right_slot">
+    <ComplicationSlot x="295" y="195" width="100" height="60" slotId="3" supportedTypes="LONG_TEXT SHORT_TEXT RANGED_VALUE EMPTY" displayName="right_slot">
       <BoundingBox x="0" y="0" width="100" height="60" />
       <Variant mode="AMBIENT" target="alpha" value="180" />
       <Complication type="SHORT_TEXT">
-        <Group x="0" y="0" width="100" height="60">
-          <PartText x="0" y="10" width="100" height="20" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TITLE]" /></Text>
-            <Font family="hud_bold" size="11" color="#a86528" />
+        <Group name="slot_3_short_text" x="0" y="0" width="100" height="60">
+          <PartText x="0" y="10" width="100" height="20">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="11" color="#a86528">
+                <Template>%s<Parameter expression="[COMPLICATION.TITLE]" /></Template>
+              </Font>
+            </Text>
           </PartText>
-          <PartText x="0" y="30" width="100" height="25" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TEXT]" /></Text>
-            <Font family="hud_bold" size="15" color="#ffd700" />
+          <PartText x="0" y="30" width="100" height="25">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="15" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+              </Font>
+            </Text>
           </PartText>
         </Group>
       </Complication>
       <Complication type="LONG_TEXT">
-        <Group x="0" y="0" width="100" height="60">
-          <PartText x="0" y="10" width="100" height="20" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TITLE]" /></Text>
-            <Font family="hud_bold" size="11" color="#a86528" />
+        <Group name="slot_3_long_text" x="0" y="0" width="100" height="60">
+          <PartText x="0" y="10" width="100" height="20">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="11" color="#a86528">
+                <Template>%s<Parameter expression="[COMPLICATION.TITLE]" /></Template>
+              </Font>
+            </Text>
           </PartText>
-          <PartText x="0" y="30" width="100" height="25" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TEXT]" /></Text>
-            <Font family="hud_bold" size="13" color="#ffd700" />
+          <PartText x="0" y="30" width="100" height="25">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="13" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+              </Font>
+            </Text>
           </PartText>
         </Group>
       </Complication>
       <Complication type="RANGED_VALUE">
-        <Group x="0" y="0" width="100" height="60">
-          <PartText x="0" y="15" width="100" height="30" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TEXT]" /></Text>
-            <Font family="hud_bold" size="15" color="#ffd700" />
+        <Group name="slot_3_ranged_value" x="0" y="0" width="100" height="60">
+          <PartText x="0" y="15" width="100" height="30">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="15" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+              </Font>
+            </Text>
           </PartText>
         </Group>
       </Complication>
@@ -215,30 +275,39 @@
     </ComplicationSlot>
 
     <!-- Slot 05: Upper-Left Slot -->
-    <ComplicationSlot id="4" x="90" y="110" width="80" height="50" slotId="5" supportedTypes="LONG_TEXT SHORT_TEXT RANGED_VALUE EMPTY" displayName="top_slot">
+    <ComplicationSlot x="90" y="110" width="80" height="50" slotId="4" supportedTypes="LONG_TEXT SHORT_TEXT RANGED_VALUE EMPTY" displayName="top_slot">
       <BoundingBox x="0" y="0" width="80" height="50" />
       <Variant mode="AMBIENT" target="alpha" value="180" />
       <Complication type="SHORT_TEXT">
-        <Group x="0" y="0" width="80" height="50">
-          <PartText x="0" y="15" width="80" height="25" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TEXT]" /></Text>
-            <Font family="hud_bold" size="14" color="#ffd700" />
+        <Group name="slot_4_short_text" x="0" y="0" width="80" height="50">
+          <PartText x="0" y="15" width="80" height="25">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="14" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+              </Font>
+            </Text>
           </PartText>
         </Group>
       </Complication>
       <Complication type="LONG_TEXT">
-        <Group x="0" y="0" width="80" height="50">
-          <PartText x="0" y="15" width="80" height="25" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TEXT]" /></Text>
-            <Font family="hud_bold" size="12" color="#ffd700" />
+        <Group name="slot_4_long_text" x="0" y="0" width="80" height="50">
+          <PartText x="0" y="15" width="80" height="25">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="12" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+              </Font>
+            </Text>
           </PartText>
         </Group>
       </Complication>
       <Complication type="RANGED_VALUE">
-        <Group x="0" y="0" width="80" height="50">
-          <PartText x="0" y="15" width="80" height="25" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TEXT]" /></Text>
-            <Font family="hud_bold" size="14" color="#ffd700" />
+        <Group name="slot_4_ranged_value" x="0" y="0" width="80" height="50">
+          <PartText x="0" y="15" width="80" height="25">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="14" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+              </Font>
+            </Text>
           </PartText>
         </Group>
       </Complication>
@@ -246,30 +315,39 @@
     </ComplicationSlot>
 
     <!-- Slot 06: Upper-Right Slot -->
-    <ComplicationSlot id="5" x="280" y="110" width="80" height="50" slotId="6" supportedTypes="LONG_TEXT SHORT_TEXT RANGED_VALUE EMPTY" displayName="top_slot">
+    <ComplicationSlot x="280" y="110" width="80" height="50" slotId="5" supportedTypes="LONG_TEXT SHORT_TEXT RANGED_VALUE EMPTY" displayName="top_slot">
       <BoundingBox x="0" y="0" width="80" height="50" />
       <Variant mode="AMBIENT" target="alpha" value="180" />
       <Complication type="SHORT_TEXT">
-        <Group x="0" y="0" width="80" height="50">
-          <PartText x="0" y="15" width="80" height="25" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TEXT]" /></Text>
-            <Font family="hud_bold" size="14" color="#ffd700" />
+        <Group name="slot_5_short_text" x="0" y="0" width="80" height="50">
+          <PartText x="0" y="15" width="80" height="25">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="14" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+              </Font>
+            </Text>
           </PartText>
         </Group>
       </Complication>
       <Complication type="LONG_TEXT">
-        <Group x="0" y="0" width="80" height="50">
-          <PartText x="0" y="15" width="80" height="25" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TEXT]" /></Text>
-            <Font family="hud_bold" size="12" color="#ffd700" />
+        <Group name="slot_5_long_text" x="0" y="0" width="80" height="50">
+          <PartText x="0" y="15" width="80" height="25">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="12" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+              </Font>
+            </Text>
           </PartText>
         </Group>
       </Complication>
       <Complication type="RANGED_VALUE">
-        <Group x="0" y="0" width="80" height="50">
-          <PartText x="0" y="15" width="80" height="25" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TEXT]" /></Text>
-            <Font family="hud_bold" size="14" color="#ffd700" />
+        <Group name="slot_5_ranged_value" x="0" y="0" width="80" height="50">
+          <PartText x="0" y="15" width="80" height="25">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="14" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+              </Font>
+            </Text>
           </PartText>
         </Group>
       </Complication>
@@ -277,30 +355,39 @@
     </ComplicationSlot>
 
     <!-- Slot 07: Lower-Left Slot -->
-    <ComplicationSlot id="6" x="90" y="280" width="80" height="50" slotId="7" supportedTypes="LONG_TEXT SHORT_TEXT RANGED_VALUE EMPTY" displayName="bottom_slot">
+    <ComplicationSlot x="90" y="280" width="80" height="50" slotId="6" supportedTypes="LONG_TEXT SHORT_TEXT RANGED_VALUE EMPTY" displayName="bottom_slot">
       <BoundingBox x="0" y="0" width="80" height="50" />
       <Variant mode="AMBIENT" target="alpha" value="180" />
       <Complication type="SHORT_TEXT">
-        <Group x="0" y="0" width="80" height="50">
-          <PartText x="0" y="15" width="80" height="25" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TEXT]" /></Text>
-            <Font family="hud_bold" size="14" color="#ffd700" />
+        <Group name="slot_6_short_text" x="0" y="0" width="80" height="50">
+          <PartText x="0" y="15" width="80" height="25">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="14" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+              </Font>
+            </Text>
           </PartText>
         </Group>
       </Complication>
       <Complication type="LONG_TEXT">
-        <Group x="0" y="0" width="80" height="50">
-          <PartText x="0" y="15" width="80" height="25" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TEXT]" /></Text>
-            <Font family="hud_bold" size="12" color="#ffd700" />
+        <Group name="slot_6_long_text" x="0" y="0" width="80" height="50">
+          <PartText x="0" y="15" width="80" height="25">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="12" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+              </Font>
+            </Text>
           </PartText>
         </Group>
       </Complication>
       <Complication type="RANGED_VALUE">
-        <Group x="0" y="0" width="80" height="50">
-          <PartText x="0" y="15" width="80" height="25" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TEXT]" /></Text>
-            <Font family="hud_bold" size="14" color="#ffd700" />
+        <Group name="slot_6_ranged_value" x="0" y="0" width="80" height="50">
+          <PartText x="0" y="15" width="80" height="25">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="14" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+              </Font>
+            </Text>
           </PartText>
         </Group>
       </Complication>
@@ -308,30 +395,39 @@
     </ComplicationSlot>
 
     <!-- Slot 08: Lower-Right Slot -->
-    <ComplicationSlot id="7" x="280" y="280" width="80" height="50" slotId="8" supportedTypes="LONG_TEXT SHORT_TEXT RANGED_VALUE EMPTY" displayName="bottom_slot">
+    <ComplicationSlot x="280" y="280" width="80" height="50" slotId="7" supportedTypes="LONG_TEXT SHORT_TEXT RANGED_VALUE EMPTY" displayName="bottom_slot">
       <BoundingBox x="0" y="0" width="80" height="50" />
       <Variant mode="AMBIENT" target="alpha" value="180" />
       <Complication type="SHORT_TEXT">
-        <Group x="0" y="0" width="80" height="50">
-          <PartText x="0" y="15" width="80" height="25" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TEXT]" /></Text>
-            <Font family="hud_bold" size="14" color="#ffd700" />
+        <Group name="slot_7_short_text" x="0" y="0" width="80" height="50">
+          <PartText x="0" y="15" width="80" height="25">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="14" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+              </Font>
+            </Text>
           </PartText>
         </Group>
       </Complication>
       <Complication type="LONG_TEXT">
-        <Group x="0" y="0" width="80" height="50">
-          <PartText x="0" y="15" width="80" height="25" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TEXT]" /></Text>
-            <Font family="hud_bold" size="12" color="#ffd700" />
+        <Group name="slot_7_long_text" x="0" y="0" width="80" height="50">
+          <PartText x="0" y="15" width="80" height="25">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="12" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+              </Font>
+            </Text>
           </PartText>
         </Group>
       </Complication>
       <Complication type="RANGED_VALUE">
-        <Group x="0" y="0" width="80" height="50">
-          <PartText x="0" y="15" width="80" height="25" alignment="CENTER">
-            <Text><Template>%s</Template><Parameter expression="[COMPLICATION.TEXT]" /></Text>
-            <Font family="hud_bold" size="14" color="#ffd700" />
+        <Group name="slot_7_ranged_value" x="0" y="0" width="80" height="50">
+          <PartText x="0" y="15" width="80" height="25">
+            <Text align="CENTER">
+              <Font family="hud_bold" size="14" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+              </Font>
+            </Text>
           </PartText>
         </Group>
       </Complication>
