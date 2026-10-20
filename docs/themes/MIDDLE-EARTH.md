@@ -7,8 +7,10 @@
 ![Aranygyűrűs térképes referencia](references/one-ring.jpg)
 
 Pergamenszínű Középfölde-térkép, az óra széléig kihúzott arany gyűrű,
-karcsú, valóban járó analóg mutatók. A felhasználói ötlet a külső feliratok,
-számok és osztások elhagyása; az arany gyűrű legyen a keret.
+karcsú, valóban járó analóg mutatók. A 2026. október 20-i felhasználói módosítás
+alapján az arany lünettán ismét szerepel az **1–12 óraszámozás**, a könnyebb
+időleolvasáshoz. A számok álló tájolásúak, kis arany mezőkön; közöttük megmarad
+a díszítő gravírozás. Percosztás és külső márkafelirat nincs.
 A térkép és a gyűrű külön réteg, a mutatók nem lehetnek háttérre égetve.
 
 Kevés, elrejthető adatmező célszerű, hogy a térkép ne váljon zsúfolttá.

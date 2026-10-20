@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 450 450">
 <title>One Ring antique gold bezel</title>
-<desc>Flowing engraved decorative script in four spaced phrases; no numerals or tick marks.</desc>
+<desc>Flowing engraved decorative script in four spaced phrases; upright hour numerals 1–12, without minute tick marks.</desc>
 <defs>
 <linearGradient id="metal" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#452915"/><stop offset=".09" stop-color="#cba05b"/><stop offset=".24" stop-color="#f0db9c"/><stop offset=".40" stop-color="#a67539"/><stop offset=".56" stop-color="#6c451f"/><stop offset=".74" stop-color="#d7b274"/><stop offset=".91" stop-color="#ffe3a3"/><stop offset="1" stop-color="#5f3819"/></linearGradient>
 <radialGradient id="shade"><stop offset=".80" stop-color="#6f4a23"/><stop offset=".95" stop-color="#d9b879"/><stop offset="1" stop-color="#503116"/></radialGradient>
@@ -79,6 +79,7 @@
 <use href="#script-1" transform="translate(225 225) rotate(294.375) translate(0 -205) skewX(-16) scale(1 .90)"/>
 <use href="#script-3" transform="translate(225 225) rotate(299.925) translate(0 -205) skewX(-16) scale(1 .90)"/>
 </g>
+<linearGradient id="hour-plate" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#dfc18a"/><stop offset=".5" stop-color="#ba9457"/><stop offset="1" stop-color="#a17a3d"/></linearGradient>
 </defs>
 <g fill="none">
 <circle cx="225" cy="225" r="223.7" stroke="#312011" stroke-width="2"/>
@@ -97,4 +98,20 @@
 </g>
 <circle cx="225" cy="225" r="196" fill="none" stroke="#efc276" opacity=".26" stroke-width=".7"/>
 <circle cx="225" cy="225" r="219" fill="none" stroke="#28150d" opacity=".42" stroke-width="1"/>
+
+<!-- Upright hour numerals take priority over engraving at each hour position. -->
+<g id="hour-numerals" fill="#302012" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="bold" text-anchor="middle">
+<g data-hour="1" transform="translate(327.500 47.465)"><rect x="-10" y="-10" width="20" height="20" rx="3" fill="url(#hour-plate)" stroke="#60411f" stroke-width=".65"/><text x="0" y="5">1</text></g>
+<g data-hour="2" transform="translate(402.535 122.500)"><rect x="-10" y="-10" width="20" height="20" rx="3" fill="url(#hour-plate)" stroke="#60411f" stroke-width=".65"/><text x="0" y="5">2</text></g>
+<g data-hour="3" transform="translate(430.000 225.000)"><rect x="-10" y="-10" width="20" height="20" rx="3" fill="url(#hour-plate)" stroke="#60411f" stroke-width=".65"/><text x="0" y="5">3</text></g>
+<g data-hour="4" transform="translate(402.535 327.500)"><rect x="-10" y="-10" width="20" height="20" rx="3" fill="url(#hour-plate)" stroke="#60411f" stroke-width=".65"/><text x="0" y="5">4</text></g>
+<g data-hour="5" transform="translate(327.500 402.535)"><rect x="-10" y="-10" width="20" height="20" rx="3" fill="url(#hour-plate)" stroke="#60411f" stroke-width=".65"/><text x="0" y="5">5</text></g>
+<g data-hour="6" transform="translate(225.000 430.000)"><rect x="-10" y="-10" width="20" height="20" rx="3" fill="url(#hour-plate)" stroke="#60411f" stroke-width=".65"/><text x="0" y="5">6</text></g>
+<g data-hour="7" transform="translate(122.500 402.535)"><rect x="-10" y="-10" width="20" height="20" rx="3" fill="url(#hour-plate)" stroke="#60411f" stroke-width=".65"/><text x="0" y="5">7</text></g>
+<g data-hour="8" transform="translate(47.465 327.500)"><rect x="-10" y="-10" width="20" height="20" rx="3" fill="url(#hour-plate)" stroke="#60411f" stroke-width=".65"/><text x="0" y="5">8</text></g>
+<g data-hour="9" transform="translate(20.000 225.000)"><rect x="-10" y="-10" width="20" height="20" rx="3" fill="url(#hour-plate)" stroke="#60411f" stroke-width=".65"/><text x="0" y="5">9</text></g>
+<g data-hour="10" transform="translate(47.465 122.500)"><rect x="-10" y="-10" width="20" height="20" rx="3" fill="url(#hour-plate)" stroke="#60411f" stroke-width=".65"/><text x="0" y="5">10</text></g>
+<g data-hour="11" transform="translate(122.500 47.465)"><rect x="-10" y="-10" width="20" height="20" rx="3" fill="url(#hour-plate)" stroke="#60411f" stroke-width=".65"/><text x="0" y="5">11</text></g>
+<g data-hour="12" transform="translate(225.000 20.000)"><rect x="-10" y="-10" width="20" height="20" rx="3" fill="url(#hour-plate)" stroke="#60411f" stroke-width=".65"/><text x="0" y="5">12</text></g>
+</g>
 </svg>

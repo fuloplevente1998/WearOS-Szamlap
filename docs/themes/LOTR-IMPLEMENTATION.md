@@ -99,3 +99,12 @@ pending Galaxy Watch7 testing.
 Next step: audit native complication data types and fallbacks, especially
 textless ranged battery data and date/app shortcut compatibility. Live data,
 tap behavior, native rendering and power use still require Galaxy Watch7 tests.
+
+## User-requested bezel hour numerals – 2026-10-20
+
+- The user explicitly restored hour numbers for easier time reading, superseding the earlier number-free design direction.
+- Added upright Arabic numerals 1–12 at 30-degree intervals, centered at logical radius 205. Small antique-gold plaques give dark numerals a clear background while preserving decorative script between the hour positions.
+- Numerals are part of the existing SVG-derived bezel bitmap, so they inherit the existing dimmed AOD treatment without adding runtime code or changing the native hands/slots.
+- Added a Chromium layout check during artwork rasterization: all twelve labels must fit their plaques and all plaque corners must stay within the bezel band. This runs before the existing 432/480 preview checks and complete HALO/LOTR CI gate.
+- The local execution environment was unavailable for this step. Validation is delegated to GitHub Actions; no new visual inspection or Watch7 result is claimed here.
+- Package ID, version, HALO and main are unchanged. Complication fallback auditing remains a separate pending task.
