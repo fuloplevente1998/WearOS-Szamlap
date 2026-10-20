@@ -1,0 +1,191 @@
+{
+  "theme": "One Ring Classic",
+  "status": "design-contract",
+  "reference": "docs/themes/references/one-ring.jpg",
+  "units": "450x450 virtual canvas; scale uniformly for 432/480 px displays",
+  "canvas": {
+    "width": 450,
+    "height": 450,
+    "center": [
+      225,
+      225
+    ],
+    "shape": "circle",
+    "safeInset": 12
+  },
+  "palette": {
+    "parchment": "#C5A67C",
+    "ink": "#382519",
+    "antiqueGold": "#AA7C34",
+    "goldHighlight": "#D8BC74",
+    "darkBronze": "#4D321B"
+  },
+  "layers": [
+    {
+      "id": "map",
+      "description": "Middle-earth parchment map; static raster, no clock hands baked in",
+      "center": [
+        225,
+        225
+      ],
+      "radius": 193,
+      "asset": "lotr_middle_earth_map.png"
+    },
+    {
+      "id": "bezel",
+      "description": "One Ring-inspired golden display bezel all the way to the circular screen edge; this is software, not the physical case",
+      "center": [
+        225,
+        225
+      ],
+      "outerRadius": 224,
+      "innerRadius": 190,
+      "asset": "lotr_one_ring_bezel.png"
+    },
+    {
+      "id": "inscription",
+      "description": "Fine engraved Elvish-inspired lettering on inner face of gold ring, decorative only",
+      "center": [
+        225,
+        225
+      ],
+      "baselineRadius": 205,
+      "asset": "lotr_ring_inscription.png"
+    },
+    {
+      "id": "complications",
+      "description": "Small low-contrast native editable complications with transparent parchment background"
+    },
+    {
+      "id": "hands",
+      "description": "Independent hour, minute and seconds hands rotating from exact center; never baked into background"
+    },
+    {
+      "id": "pin",
+      "description": "small antique-bronze hub",
+      "center": [
+        225,
+        225
+      ]
+    }
+  ],
+  "hands": {
+    "hour": {
+      "length": 98,
+      "color": "darkBronze",
+      "style": "engraved tapered metal",
+      "asset": "lotr_hour_hand.png"
+    },
+    "minute": {
+      "length": 145,
+      "color": "antiqueGold",
+      "style": "slender engraved metal",
+      "asset": "lotr_minute_hand.png"
+    },
+    "second": {
+      "length": 157,
+      "color": "ink",
+      "style": "thin bronze needle",
+      "optional": true,
+      "asset": "lotr_second_hand.png"
+    }
+  },
+  "complications": [
+    {
+      "id": "battery",
+      "position": "12",
+      "center": [
+        225,
+        108
+      ],
+      "size": [
+        86,
+        42
+      ],
+      "source": "battery",
+      "enabled": true
+    },
+    {
+      "id": "heart_rate",
+      "position": "9",
+      "center": [
+        101,
+        222
+      ],
+      "size": [
+        92,
+        46
+      ],
+      "source": "heart rate",
+      "enabled": true
+    },
+    {
+      "id": "steps",
+      "position": "3",
+      "center": [
+        349,
+        222
+      ],
+      "size": [
+        92,
+        46
+      ],
+      "source": "steps",
+      "enabled": true
+    },
+    {
+      "id": "date",
+      "position": "6",
+      "center": [
+        225,
+        348
+      ],
+      "size": [
+        90,
+        40
+      ],
+      "source": "date",
+      "enabled": true
+    },
+    {
+      "id": "workout",
+      "position": "4:30",
+      "center": [
+        322,
+        317
+      ],
+      "size": [
+        46,
+        46
+      ],
+      "source": "app shortcut selectable on watch (e.g. TrainPilot)",
+      "enabled": true
+    }
+  ],
+  "ambient": {
+    "hideSeconds": true,
+    "reduceColor": true,
+    "dimOrHideMap": true,
+    "reduceGoldGlow": true,
+    "disableContinuousEffects": true,
+    "retainTimeReadability": true
+  },
+  "implementation": {
+    "packageId": "hu.fuloplevente.oneringwatchface",
+    "module": ":lotrwatchface",
+    "watchFaceFormat": 2,
+    "separateFromSpartanNight": true,
+    "noSyntheticHealthMeasurements": true,
+    "nativeWearComplications": true
+  },
+  "acceptance": [
+    "Distinct LOTR APK installable alongside HALO",
+    "Correct moving analog hands",
+    "Gold ring reaches display edge on round screens",
+    "Readable at 432px and 480px",
+    "All five fields user configurable with native provider picker",
+    "No hard-coded pulse/step/battery values",
+    "Always-on mode simplified and verified",
+    "GitHub Actions checks and APK artifact for LOTR independent of HALO"
+  ]
+}

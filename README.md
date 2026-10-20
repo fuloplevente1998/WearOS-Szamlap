@@ -2,13 +2,13 @@
 
 Az első működő téma a **Spartan Night**, HALO ihletésű natív számlap.
 További témák: God of War / Kratos, Gyűrűk Ura / Egy Gyűrű és Star Wars.
-Ezek jelenleg dizájn- és fejlesztési tervek, referenciaanyagokkal; nincs hozzájuk APK.
+A God of War és Star Wars jelenleg dizájnterv. Az Egy Gyűrű külön, draft fejlesztési ágon működő, nem végleges teszt-APK-ig jutott; készülékes jóváhagyása hátravan.
 
 | Téma | Állapot | Részletek |
 | --- | --- | --- |
 | HALO – Spartan Night | 0.1.5-test, telepíthető teszt-APK | [Letöltések](https://github.com/fuloplevente1998/WearOS-Szamlap/releases), [dizájn](docs/themes/HALO.md) |
 | God of War – Kratos | Tervezés | [Dizájnterv](docs/themes/KRATOS.md) |
-| Gyűrűk Ura – Egy Gyűrű / Középfölde | Tervezés, két vizuális irány | [Dizájnterv](docs/themes/MIDDLE-EARTH.md) |
+| Gyűrűk Ura – Egy Gyűrű / Középfölde | One Ring Classic 0.1.0-test, draft APK + CI; órás teszt hátravan | [PR #4](https://github.com/fuloplevente1998/WearOS-Szamlap/pull/4), [dizájn és tesztelés](docs/themes/MIDDLE-EARTH.md) |
 | Star Wars | Tervezés | [Dizájnterv](docs/themes/STAR-WARS.md) |
 
 [Fejlesztési irány](docs/ROADMAP.md) · [Fejlesztőkörnyezet](docs/DEVELOPMENT.md) ·

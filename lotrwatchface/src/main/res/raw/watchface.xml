@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WatchFace width="450" height="450" clipShape="CIRCLE">
+    <Metadata key="CLOCK_TYPE" value="ANALOG"/>
+    <Metadata key="PREVIEW_TIME" value="10:08:30"/>
+    <Scene backgroundColor="#26190e">
+        <!-- The parchment map and One Ring bezel are separately rendered, never contain baked-in hands. -->
+        <PartImage x="0" y="0" width="450" height="450">
+            <Image resource="lotr_middle_earth_map"/>
+            <Variant mode="AMBIENT" target="alpha" value="0"/>
+        </PartImage>
+        <PartImage x="0" y="0" width="450" height="450">
+            <Image resource="lotr_one_ring_bezel"/>
+            <Variant mode="AMBIENT" target="alpha" value="89"/>
+        </PartImage>
+
+<ComplicationSlot x="182" y="87" width="86" height="42" slotId="0" displayName="lotr_battery_slot" supportedTypes="SHORT_TEXT RANGED_VALUE LONG_TEXT EMPTY" isCustomizable="TRUE">
+<Variant mode="AMBIENT" target="alpha" value="0"/>
+<DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="SHORT_TEXT"/>
+<BoundingBox x="0" y="0" width="86" height="42"/><Complication type="SHORT_TEXT"><Group x="0" y="0" width="86" height="42" name="lotr_battery_display"><PartDraw x="0" y="0" width="86" height="42"><Rectangle x="0" y="0" width="86" height="42"><Fill color="#CCB28A"/><Stroke color="#6E4927" thickness="1.1"/></Rectangle><Rectangle x="3" y="3" width="80" height="36"><Stroke color="#E6C796" thickness="0.55"/></Rectangle></PartDraw><PartText x="2" y="5" width="82" height="13">
+<Text align="CENTER" ellipsis="TRUE" maxLines="1"><Font family="sans-serif" size="9" weight="BOLD" color="#342317">AKKU</Font></Text>
+</PartText><PartText x="2" y="18" width="82" height="21">
+<Text align="CENTER" ellipsis="TRUE" maxLines="1"><Font family="sans-serif" size="15" weight="BOLD" color="#342317"><Template>%s<Parameter expression="[COMPLICATION.TEXT] != null ? [COMPLICATION.TEXT] : &quot;--&quot;"/></Template></Font></Text>
+</PartText></Group></Complication><Complication type="RANGED_VALUE"><Group x="0" y="0" width="86" height="42" name="lotr_battery_display"><PartDraw x="0" y="0" width="86" height="42"><Rectangle x="0" y="0" width="86" height="42"><Fill color="#CCB28A"/><Stroke color="#6E4927" thickness="1.1"/></Rectangle><Rectangle x="3" y="3" width="80" height="36"><Stroke color="#E6C796" thickness="0.55"/></Rectangle></PartDraw><PartText x="2" y="5" width="82" height="13">
+<Text align="CENTER" ellipsis="TRUE" maxLines="1"><Font family="sans-serif" size="9" weight="BOLD" color="#342317">AKKU</Font></Text>
+</PartText><PartText x="2" y="18" width="82" height="21">
+<Text align="CENTER" ellipsis="TRUE" maxLines="1"><Font family="sans-serif" size="15" weight="BOLD" color="#342317"><Template>%s<Parameter expression="[COMPLICATION.TEXT] != null ? [COMPLICATION.TEXT] : &quot;--&quot;"/></Template></Font></Text>
+</PartText></Group></Complication><Complication type="LONG_TEXT"><Group x="0" y="0" width="86" height="42" name="lotr_battery_display"><PartDraw x="0" y="0" width="86" height="42"><Rectangle x="0" y="0" width="86" height="42"><Fill color="#CCB28A"/><Stroke color="#6E4927" thickness="1.1"/></Rectangle><Rectangle x="3" y="3" width="80" height="36"><Stroke color="#E6C796" thickness="0.55"/></Rectangle></PartDraw><PartText x="2" y="5" width="82" height="13">
+<Text align="CENTER" ellipsis="TRUE" maxLines="1"><Font family="sans-serif" size="9" weight="BOLD" color="#342317">AKKU</Font></Text>
+</PartText><PartText x="2" y="18" width="82" height="21">
+<Text align="CENTER" ellipsis="TRUE" maxLines="1"><Font family="sans-serif" size="15" weight="BOLD" color="#342317"><Template>%s<Parameter expression="[COMPLICATION.TEXT] != null ? [COMPLICATION.TEXT] : &quot;--&quot;"/></Template></Font></Text>
+</PartText></Group></Complication><Complication type="EMPTY"></Complication></ComplicationSlot>
+<ComplicationSlot x="55" y="199" width="92" height="46" slotId="1" displayName="lotr_heart_rate_slot" supportedTypes="SHORT_TEXT LONG_TEXT EMPTY" isCustomizable="TRUE">
+<Variant mode="AMBIENT" target="alpha" value="0"/>
+<DefaultProviderPolicy defaultSystemProvider="HEART_RATE" defaultSystemProviderType="SHORT_TEXT"/>
+<BoundingBox x="0" y="0" width="92" height="46"/><Complication type="SHORT_TEXT"><Group x="0" y="0" width="92" height="46" name="lotr_heart_rate_display"><PartDraw x="0" y="0" width="92" height="46"><Rectangle x="0" y="0" width="92" height="46"><Fill color="#CCB28A"/><Stroke color="#6E4927" thickness="1.1"/></Rectangle><Rectangle x="3" y="3" width="86" height="40"><Stroke color="#E6C796" thickness="0.55"/></Rectangle></PartDraw><PartText x="2" y="5" width="88" height="13">
+<Text align="CENTER" ellipsis="TRUE" maxLines="1"><Font family="sans-serif" size="9" weight="BOLD" color="#342317">PULZUS</Font></Text>
+</PartText><PartText x="2" y="18" width="88" height="25">
+<Text align="CENTER" ellipsis="TRUE" maxLines="1"><Font family="sans-serif" size="15" weight="BOLD" color="#342317"><Template>%s<Parameter expression="[COMPLICATION.TEXT] != null ? [COMPLICATION.TEXT] : &quot;--&quot;"/></Template></Font></Text>
+</PartText></Group></Complication><Complication type="LONG_TEXT"><Group x="0" y="0" width="92" height="46" name="lotr_heart_rate_display"><PartDraw x="0" y="0" width="92" height="46"><Rectangle x="0" y="0" width="92" height="46"><Fill color="#CCB28A"/><Stroke color="#6E4927" thickness="1.1"/></Rectangle><Rectangle x="3" y="3" width="86" height="40"><Stroke color="#E6C796" thickness="0.55"/></Rectangle></PartDraw><PartText x="2" y="5" width="88" height="13">
+<Text align="CENTER" ellipsis="TRUE" maxLines="1"><Font family="sans-serif" size="9" weight="BOLD" color="#342317">PULZUS</Font></Text>
+</PartText><PartText x="2" y="18" width="88" height="25">
+<Text align="CENTER" ellipsis="TRUE" maxLines="1"><Font family="sans-serif" size="15" weight="BOLD" color="#342317"><Template>%s<Parameter expression="[COMPLICATION.TEXT] != null ? [COMPLICATION.TEXT] : &quot;--&quot;"/></Template></Font></Text>
+</PartText></Group></Complication><Complication type="EMPTY"></Complication></ComplicationSlot>
+<ComplicationSlot x="303" y="199" width="92" height="46" slotId="2" displayName="lotr_steps_slot" supportedTypes="SHORT_TEXT LONG_TEXT EMPTY" isCustomizable="TRUE">
+<Variant mode="AMBIENT" target="alpha" value="0"/>
+<DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="SHORT_TEXT"/>
+<BoundingBox x="0" y="0" width="92" height="46"/><Complication type="SHORT_TEXT"><Group x="0" y="0" width="92" height="46" name="lotr_steps_display"><PartDraw x="0" y="0" width="92" height="46"><Rectangle x="0" y="0" width="92" height="46"><Fill color="#CCB28A"/><Stroke color="#6E4927" thickness="1.1"/></Rectangle><Rectangle x="3" y="3" width="86" height="40"><Stroke color="#E6C796" thickness="0.55"/></Rectangle></PartDraw><PartText x="2" y="5" width="88" height="13">
+<Text align="CENTER" ellipsis="TRUE" maxLines="1"><Font family="sans-serif" size="9" weight="BOLD" color="#342317">LÉPÉS</Font></Text>
+</PartText><PartText x="2" y="18" width="88" height="25">
+<Text align="CENTER" ellipsis="TRUE" maxLines="1"><Font family="sans-serif" size="13" weight="BOLD" color="#342317"><Template>%s<Parameter expression="[COMPLICATION.TEXT] != null ? [COMPLICATION.TEXT] : &quot;--&quot;"/></Template></Font></Text>
+</PartText></Group></Complication><Complication type="LONG_TEXT"><Group x="0" y="0" width="92" height="46" name="lotr_steps_display"><PartDraw x="0" y="0" width="92" height="46"><Rectangle x="0" y="0" width="92" height="46"><Fill color="#CCB28A"/><Stroke color="#6E4927" thickness="1.1"/></Rectangle><Rectangle x="3" y="3" width="86" height="40"><Stroke color="#E6C796" thickness="0.55"/></Rectangle></PartDraw><PartText x="2" y="5" width="88" height="13">
+<Text align="CENTER" ellipsis="TRUE" maxLines="1"><Font family="sans-serif" size="9" weight="BOLD" color="#342317">LÉPÉS</Font></Text>
+</PartText><PartText x="2" y="18" width="88" height="25">
+<Text align="CENTER" ellipsis="TRUE" maxLines="1"><Font family="sans-serif" size="13" weight="BOLD" color="#342317"><Template>%s<Parameter expression="[COMPLICATION.TEXT] != null ? [COMPLICATION.TEXT] : &quot;--&quot;"/></Template></Font></Text>
+</PartText></Group></Complication><Complication type="EMPTY"></Complication></ComplicationSlot>
+<ComplicationSlot x="180" y="328" width="90" height="40" slotId="3" displayName="lotr_date_slot" supportedTypes="SHORT_TEXT LONG_TEXT EMPTY" isCustomizable="TRUE">
+<Variant mode="AMBIENT" target="alpha" value="0"/>
+<DefaultProviderPolicy defaultSystemProvider="DATE" defaultSystemProviderType="SHORT_TEXT"/>
+<BoundingBox x="0" y="0" width="90" height="40"/><Complication type="SHORT_TEXT"><Group x="0" y="0" width="90" height="40" name="lotr_date_display"><PartDraw x="0" y="0" width="90" height="40"><Rectangle x="0" y="0" width="90" height="40"><Fill color="#CCB28A"/><Stroke color="#6E4927" thickness="1.1"/></Rectangle><Rectangle x="3" y="3" width="84" height="34"><Stroke color="#E6C796" thickness="0.55"/></Rectangle></PartDraw><PartText x="2" y="5" width="86" height="13">
+<Text align="CENTER" ellipsis="TRUE" maxLines="1"><Font family="sans-serif" size="9" weight="BOLD" color="#342317">DÁTUM</Font></Text>
+</PartText><PartText x="2" y="18" width="86" height="19">
+<Text align="CENTER" ellipsis="TRUE" maxLines="1"><Font family="sans-serif" size="13" weight="BOLD" color="#342317"><Template>%s<Parameter expression="[COMPLICATION.TEXT] != null ? [COMPLICATION.TEXT] : &quot;--&quot;"/></Template></Font></Text>
+</PartText></Group></Complication><Complication type="LONG_TEXT"><Group x="0" y="0" width="90" height="40" name="lotr_date_display"><PartDraw x="0" y="0" width="90" height="40"><Rectangle x="0" y="0" width="90" height="40"><Fill color="#CCB28A"/><Stroke color="#6E4927" thickness="1.1"/></Rectangle><Rectangle x="3" y="3" width="84" height="34"><Stroke color="#E6C796" thickness="0.55"/></Rectangle></PartDraw><PartText x="2" y="5" width="86" height="13">
+<Text align="CENTER" ellipsis="TRUE" maxLines="1"><Font family="sans-serif" size="9" weight="BOLD" color="#342317">DÁTUM</Font></Text>
+</PartText><PartText x="2" y="18" width="86" height="19">
+<Text align="CENTER" ellipsis="TRUE" maxLines="1"><Font family="sans-serif" size="13" weight="BOLD" color="#342317"><Template>%s<Parameter expression="[COMPLICATION.TEXT] != null ? [COMPLICATION.TEXT] : &quot;--&quot;"/></Template></Font></Text>
+</PartText></Group></Complication><Complication type="EMPTY"></Complication></ComplicationSlot>
+<ComplicationSlot x="299" y="294" width="46" height="46" slotId="4" displayName="lotr_workout_slot" supportedTypes="LONG_TEXT SHORT_TEXT EMPTY" isCustomizable="TRUE">
+<Variant mode="AMBIENT" target="alpha" value="0"/>
+<DefaultProviderPolicy defaultSystemProvider="APP_SHORTCUT" defaultSystemProviderType="LONG_TEXT"/>
+<BoundingBox x="0" y="0" width="46" height="46"/><Complication type="LONG_TEXT"><Group x="0" y="0" width="46" height="46" name="lotr_workout_display"><PartDraw x="0" y="0" width="46" height="46"><Rectangle x="0" y="0" width="46" height="46"><Fill color="#CCB28A"/><Stroke color="#6E4927" thickness="1.1"/></Rectangle><Rectangle x="3" y="3" width="40" height="40"><Stroke color="#E6C796" thickness="0.55"/></Rectangle></PartDraw><PartText x="2" y="5" width="42" height="13">
+<Text align="CENTER" ellipsis="TRUE" maxLines="1"><Font family="sans-serif" size="10" weight="BOLD" color="#342317">EDZÉS</Font></Text>
+</PartText><PartText x="2" y="23" width="42" height="17">
+<Text align="CENTER" ellipsis="TRUE" maxLines="1"><Font family="sans-serif" size="9" weight="BOLD" color="#342317">NYITÁS</Font></Text>
+</PartText></Group></Complication><Complication type="SHORT_TEXT"><Group x="0" y="0" width="46" height="46" name="lotr_workout_display"><PartDraw x="0" y="0" width="46" height="46"><Rectangle x="0" y="0" width="46" height="46"><Fill color="#CCB28A"/><Stroke color="#6E4927" thickness="1.1"/></Rectangle><Rectangle x="3" y="3" width="40" height="40"><Stroke color="#E6C796" thickness="0.55"/></Rectangle></PartDraw><PartText x="2" y="5" width="42" height="13">
+<Text align="CENTER" ellipsis="TRUE" maxLines="1"><Font family="sans-serif" size="10" weight="BOLD" color="#342317">EDZÉS</Font></Text>
+</PartText><PartText x="2" y="23" width="42" height="17">
+<Text align="CENTER" ellipsis="TRUE" maxLines="1"><Font family="sans-serif" size="9" weight="BOLD" color="#342317">NYITÁS</Font></Text>
+</PartText></Group></Complication><Complication type="EMPTY"></Complication></ComplicationSlot>
+        <!-- Draw time above the editable fields so their opaque backgrounds cannot hide the hands. -->
+        <AnalogClock x="0" y="0" width="450" height="450">
+            <HourHand resource="lotr_hour_hand" x="213" y="113" width="24" height="125" pivotX="0.5" pivotY="0.896"/>
+            <MinuteHand resource="lotr_minute_hand" x="216" y="53" width="18" height="190" pivotX="0.5" pivotY="0.905263"/>
+            <SecondHand resource="lotr_second_hand" x="222" y="55" width="6" height="196" pivotX="0.5" pivotY="0.867347">
+                <Variant mode="AMBIENT" target="alpha" value="0"/>
+            </SecondHand>
+        </AnalogClock>
+        <PartDraw x="0" y="0" width="450" height="450">
+            <Ellipse x="219" y="219" width="12" height="12"><Fill color="#4D321B"/></Ellipse>
+            <Ellipse x="222" y="222" width="6" height="6"><Fill color="#D8BC74"/></Ellipse>
+        </PartDraw>
+    </Scene>
+</WatchFace>

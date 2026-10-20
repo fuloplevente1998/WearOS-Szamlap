@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="watch_face_name">One Ring · Classic · Test</string>
+  <string name="lotr_battery_slot">Akkumulátor</string>
+  <string name="lotr_heart_rate_slot">Pulzus</string>
+  <string name="lotr_steps_slot">Lépések</string>
+  <string name="lotr_date_slot">Dátum</string>
+  <string name="lotr_workout_slot">Edzésindító</string>
+</resources>

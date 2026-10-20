@@ -1,0 +1,241 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 450 450">
+<title>Middle-earth parchment map illustration</title>
+<desc>Stylized ink cartography with engraved terrain, rivers and settlements; not an exact reproduction of the reference map.</desc>
+<defs>
+<radialGradient id="paper"><stop stop-color="#dac095"/><stop offset=".72" stop-color="#cba77a"/><stop offset="1" stop-color="#87613f"/></radialGradient>
+<radialGradient id="vignette"><stop offset=".69" stop-color="#201209" stop-opacity="0"/><stop offset="1" stop-color="#211008" stop-opacity=".52"/></radialGradient>
+<filter id="grain" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency=".09" numOctaves="3" seed="11" result="n"/><feColorMatrix in="n" type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".08"/></feComponentTransfer></filter>
+<clipPath id="mapClip"><circle cx="225" cy="225" r="190"/></clipPath>
+<g id="mountain" fill="none" stroke="#483326" stroke-width=".9" stroke-linejoin="round" opacity=".85"><path d="M-8 5L-2-5L0-7L8 5M-2-5L0-1L2-3M0-1L-1 5M2 0L5 4M-4 1L-6 4M-8 5Q0 3 8 5"/></g>
+<g id="tree" stroke="#3e3328" stroke-width=".7" fill="none"><path d="M0 5V-2M-4 1Q-7-2-3-4Q-3-8 0-6Q4-7 4-3Q8 0 3 2Q0 4-4 1M-2 5H2"/></g>
+</defs>
+<g clip-path="url(#mapClip)">
+<circle cx="225" cy="225" r="190" fill="url(#paper)"/>
+<path d="M55 157Q93 87 148 91Q199 39 260 64T382 120M51 269Q121 252 149 313T244 392M216 72Q241 155 315 157T408 215" fill="none" stroke="#816443" stroke-opacity=".29" stroke-width="1.1"/>
+<g transform="translate(225 225)" stroke="#665039" stroke-width=".85" fill-opacity=".14" stroke-opacity=".6" stroke-linejoin="round"><path d="M -186 -8 C -166 -33 -151 -34 -142 -62 C -130 -79 -115 -88 -114 -118 C -103 -117 -95 -137 -79 -130 C -76 -112 -88 -100 -77 -91 C -65 -83 -60 -68 -72 -49 C -66 -25 -76 -9 -59 11 C -59 40 -73 57 -94 68 C -104 88 -118 100 -136 103 C -148 73 -167 66 -181 46 Z" fill="#b29167"/><path d="M -28 -172 C -16 -167 -5 -146 4 -135 C 15 -113 3 -103 20 -84 C 27 -67 19 -54 35 -35 C 46 -20 43 -10 56 9 C 67 23 48 41 52 56 C 44 87 37 93 37 122 C 20 129 13 119 7 109 C -10 92 -7 72 -19 56 C -31 28 -33 5 -40 -17 C -55 -45 -45 -59 -53 -80 C -67 -119 -51 -158 -28 -172 Z" fill="#ab8c65"/><path d="M 81 -120 C 102 -119 122 -106 131 -85 C 140 -71 159 -58 160 -35 C 150 -17 133 -5 137 23 C 151 43 147 62 135 81 C 122 92 117 113 101 118 C 92 95 79 83 77 65 C 85 42 74 26 80 12 C 72 -6 65 -19 74 -31 C 56 -51 65 -78 81 -120 Z" fill="#a68b68"/><path d="M -56 142 C -48 131 -43 121 -23 120 C -12 127 -1 137 11 148 C 29 151 38 163 35 178 C 10 186 -10 185 -31 174 Z" fill="#a88967"/></g>
+<g fill="none" stroke="#4e392b" stroke-width=".65" opacity=".45">
+<path d="M118 92Q135 166 153 208Q159 245 130 313"/>
+<path d="M212 93Q233 125 237 161Q226 210 250 243Q261 292 258 346"/>
+<path d="M291 111Q320 154 319 206Q322 250 346 290"/>
+</g>
+<g><use href="#mountain" transform="translate(209.0 116.0) scale(0.65)"/><use href="#mountain" transform="translate(220.3 125.7) scale(0.84)"/><use href="#mountain" transform="translate(214.1 135.4) scale(1.03)"/><use href="#mountain" transform="translate(217.1 145.1) scale(0.65)"/><use href="#mountain" transform="translate(208.9 154.8) scale(0.84)"/><use href="#mountain" transform="translate(195.4 164.5) scale(1.03)"/><use href="#mountain" transform="translate(203.6 174.2) scale(0.65)"/><use href="#mountain" transform="translate(204.9 183.9) scale(0.84)"/><use href="#mountain" transform="translate(209.5 193.6) scale(1.03)"/><use href="#mountain" transform="translate(223.5 203.3) scale(0.65)"/><use href="#mountain" transform="translate(215.1 213.0) scale(0.84)"/><use href="#mountain" transform="translate(209.0 222.7) scale(1.03)"/><use href="#mountain" transform="translate(207.7 232.4) scale(0.65)"/><use href="#mountain" transform="translate(194.9 242.1) scale(0.84)"/><use href="#mountain" transform="translate(202.2 251.8) scale(1.03)"/><use href="#mountain" transform="translate(212.9 261.5) scale(0.65)"/><use href="#mountain" transform="translate(211.7 271.2) scale(0.84)"/><use href="#mountain" transform="translate(221.5 280.9) scale(1.03)"/><use href="#mountain" transform="translate(216.2 290.6) scale(0.65)"/><use href="#mountain" transform="translate(201.8 300.3) scale(0.84)"/><use href="#mountain" transform="translate(204.4 310.0) scale(1.03)"/><use href="#mountain" transform="translate(199.0 319.7) scale(0.65)"/><use href="#mountain" transform="translate(201.9 329.4) scale(0.84)"/><use href="#mountain" transform="translate(218.5 339.1) scale(1.03)"/>
+<use href="#mountain" transform="translate(319.0 166.0) scale(.75)"/><use href="#mountain" transform="translate(331.9 174.3) scale(.75)"/><use href="#mountain" transform="translate(315.7 182.6) scale(.75)"/><use href="#mountain" transform="translate(307.0 190.9) scale(.75)"/><use href="#mountain" transform="translate(325.4 199.2) scale(.75)"/><use href="#mountain" transform="translate(329.4 207.5) scale(.75)"/><use href="#mountain" transform="translate(309.9 215.8) scale(.75)"/><use href="#mountain" transform="translate(311.0 224.1) scale(.75)"/><use href="#mountain" transform="translate(330.2 232.4) scale(.75)"/><use href="#mountain" transform="translate(324.2 240.7) scale(.75)"/><use href="#mountain" transform="translate(306.5 249.0) scale(.75)"/><use href="#mountain" transform="translate(317.1 257.3) scale(.75)"/><use href="#mountain" transform="translate(332.0 265.6) scale(.75)"/><use href="#mountain" transform="translate(317.6 273.9) scale(.75)"/><use href="#mountain" transform="translate(306.4 282.2) scale(.75)"/><use href="#mountain" transform="translate(323.7 290.5) scale(.75)"/><use href="#mountain" transform="translate(330.4 298.8) scale(.75)"/>
+<use href="#tree" transform="translate(116.0 136.0) scale(.8)"/><use href="#tree" transform="translate(142.6 139.8) scale(.8)"/><use href="#tree" transform="translate(157.0 143.6) scale(.8)"/><use href="#tree" transform="translate(154.6 147.4) scale(.8)"/><use href="#tree" transform="translate(113.3 151.2) scale(.8)"/><use href="#tree" transform="translate(101.7 155.0) scale(.8)"/><use href="#tree" transform="translate(103.3 158.8) scale(.8)"/><use href="#tree" transform="translate(121.5 162.6) scale(.8)"/><use href="#tree" transform="translate(121.3 166.4) scale(.8)"/><use href="#tree" transform="translate(145.8 170.2) scale(.8)"/><use href="#tree" transform="translate(156.2 174.0) scale(.8)"/><use href="#tree" transform="translate(150.3 177.8) scale(.8)"/><use href="#tree" transform="translate(108.1 181.6) scale(.8)"/><use href="#tree" transform="translate(98.9 185.4) scale(.8)"/><use href="#tree" transform="translate(104.6 189.2) scale(.8)"/><use href="#tree" transform="translate(126.1 193.0) scale(.8)"/><use href="#tree" transform="translate(126.4 196.8) scale(.8)"/><use href="#tree" transform="translate(148.2 200.6) scale(.8)"/><use href="#tree" transform="translate(154.4 204.4) scale(.8)"/><use href="#tree" transform="translate(145.4 208.2) scale(.8)"/><use href="#tree" transform="translate(103.2 212.0) scale(.8)"/><use href="#tree" transform="translate(97.0 215.8) scale(.8)"/><use href="#tree" transform="translate(106.9 219.6) scale(.8)"/><use href="#tree" transform="translate(131.1 223.4) scale(.8)"/><use href="#tree" transform="translate(131.0 227.2) scale(.8)"/><use href="#tree" transform="translate(149.6 231.0) scale(.8)"/><use href="#tree" transform="translate(151.7 234.8) scale(.8)"/><use href="#tree" transform="translate(140.3 238.6) scale(.8)"/><use href="#tree" transform="translate(98.8 242.4) scale(.8)"/><use href="#tree" transform="translate(96.1 246.2) scale(.8)"/><use href="#tree" transform="translate(110.0 250.0) scale(.8)"/><use href="#tree" transform="translate(136.4 253.8) scale(.8)"/><use href="#tree" transform="translate(135.1 257.6) scale(.8)"/><use href="#tree" transform="translate(150.0 261.4) scale(.8)"/><use href="#tree" transform="translate(148.1 265.2) scale(.8)"/><use href="#tree" transform="translate(135.0 269.0) scale(.8)"/><use href="#tree" transform="translate(95.1 272.8) scale(.8)"/><use href="#tree" transform="translate(96.2 276.6) scale(.8)"/><use href="#tree" transform="translate(114.0 280.4) scale(.8)"/><use href="#tree" transform="translate(141.7 284.2) scale(.8)"/><use href="#tree" transform="translate(138.5 288.0) scale(.8)"/><use href="#tree" transform="translate(149.3 291.8) scale(.8)"/><use href="#tree" transform="translate(143.8 295.6) scale(.8)"/><use href="#tree" transform="translate(129.7 299.4) scale(.8)"/><use href="#tree" transform="translate(92.2 303.2) scale(.8)"/></g>
+<g fill="none" stroke="#3c291e" stroke-width="1.15" stroke-linecap="round" opacity=".72">
+<path d="M85 221Q148 222 177 248T245 281T304 338" stroke-dasharray="4 3"/>
+<path d="M118 131Q153 154 169 180Q185 220 227 234T304 216" stroke-dasharray="4 3"/>
+<path d="M245 115Q262 132 282 150T323 143" stroke-dasharray="4 3"/>
+<path d="M159 111Q166 121 172 131"/><path d="M282 263q8 3 8 12t-8 12"/>
+</g>
+<g id="ink-details" fill="none" stroke="#4a3425" stroke-linecap="round" stroke-linejoin="round">
+<g stroke-width=".7" opacity=".8">
+<path d="M217 112C235 139 224 161 239 181S247 217 256 234S257 266 271 284S276 308 300 325"/>
+<path d="M242 177Q260 178 268 190T276 214Q266 226 256 234"/>
+<path d="M261 254Q290 241 307 262T329 286"/>
+<path d="M146 141Q166 159 169 178T164 207Q150 225 143 240"/>
+<path d="M189 272Q177 285 181 302T161 333"/>
+<path d="M275 312Q255 321 247 339"/>
+<path d="M152 278Q164 283 181 302"/>
+<path d="M224 160Q211 160 196 147"/>
+</g>
+<g stroke-width=".45" opacity=".38">
+<path d="M61 230Q90 257 94 279T121 318"/>
+<path d="M67 233Q96 261 99 280T126 316"/>
+<path d="M170 107Q158 135 167 160T181 197"/>
+<path d="M177 111Q166 139 174 164T187 196"/>
+<path d="M285 108Q312 117 337 149T369 182"/>
+<path d="M281 115Q310 127 329 153T361 184"/>
+<path d="M280 348Q306 359 329 348T354 321"/>
+<path d="M281 354Q305 366 333 354T360 325"/>
+<path d="M125 343Q157 366 175 376"/>
+<path d="M124 350Q150 372 170 382"/>
+</g>
+<g>
+<use href="#mountain" transform="translate(221.0 125.0) scale(0.42)"/>
+<use href="#mountain" transform="translate(203.8 130.3) scale(0.51)"/>
+<use href="#mountain" transform="translate(228.7 135.6) scale(0.60)"/>
+<use href="#mountain" transform="translate(206.5 140.9) scale(0.42)"/>
+<use href="#mountain" transform="translate(225.4 146.2) scale(0.51)"/>
+<use href="#mountain" transform="translate(198.5 151.5) scale(0.60)"/>
+<use href="#mountain" transform="translate(215.9 156.8) scale(0.42)"/>
+<use href="#mountain" transform="translate(191.2 162.1) scale(0.51)"/>
+<use href="#mountain" transform="translate(213.7 167.4) scale(0.60)"/>
+<use href="#mountain" transform="translate(195.0 172.7) scale(0.42)"/>
+<use href="#mountain" transform="translate(221.9 178.0) scale(0.51)"/>
+<use href="#mountain" transform="translate(204.5 183.3) scale(0.60)"/>
+<use href="#mountain" transform="translate(228.9 188.6) scale(0.42)"/>
+<use href="#mountain" transform="translate(206.1 193.9) scale(0.51)"/>
+<use href="#mountain" transform="translate(224.6 199.2) scale(0.60)"/>
+<use href="#mountain" transform="translate(197.6 204.5) scale(0.42)"/>
+<use href="#mountain" transform="translate(215.2 209.8) scale(0.51)"/>
+<use href="#mountain" transform="translate(191.1 215.1) scale(0.60)"/>
+<use href="#mountain" transform="translate(214.1 220.4) scale(0.42)"/>
+<use href="#mountain" transform="translate(195.8 225.7) scale(0.51)"/>
+<use href="#mountain" transform="translate(222.9 231.0) scale(0.60)"/>
+<use href="#mountain" transform="translate(205.1 236.3) scale(0.42)"/>
+<use href="#mountain" transform="translate(229.0 241.6) scale(0.51)"/>
+<use href="#mountain" transform="translate(205.7 246.9) scale(0.60)"/>
+<use href="#mountain" transform="translate(223.7 252.2) scale(0.42)"/>
+<use href="#mountain" transform="translate(196.7 257.5) scale(0.51)"/>
+<use href="#mountain" transform="translate(214.6 262.8) scale(0.60)"/>
+<use href="#mountain" transform="translate(191.0 268.1) scale(0.42)"/>
+<use href="#mountain" transform="translate(214.6 273.4) scale(0.51)"/>
+<use href="#mountain" transform="translate(196.7 278.7) scale(0.60)"/>
+<use href="#mountain" transform="translate(223.7 284.0) scale(0.42)"/>
+<use href="#mountain" transform="translate(205.7 289.3) scale(0.51)"/>
+<use href="#mountain" transform="translate(229.0 294.6) scale(0.60)"/>
+<use href="#mountain" transform="translate(205.1 299.9) scale(0.42)"/>
+<use href="#mountain" transform="translate(222.8 305.2) scale(0.51)"/>
+<use href="#mountain" transform="translate(195.8 310.5) scale(0.60)"/>
+<use href="#mountain" transform="translate(214.1 315.8) scale(0.42)"/>
+<use href="#mountain" transform="translate(191.1 321.1) scale(0.51)"/>
+<use href="#mountain" transform="translate(271.0 289.0) scale(.48)"/>
+<use href="#mountain" transform="translate(274.2 292.6) scale(.48)"/>
+<use href="#mountain" transform="translate(277.4 295.4) scale(.48)"/>
+<use href="#mountain" transform="translate(280.6 296.9) scale(.48)"/>
+<use href="#mountain" transform="translate(283.8 296.7) scale(.48)"/>
+<use href="#mountain" transform="translate(287.0 295.0) scale(.48)"/>
+<use href="#mountain" transform="translate(290.2 292.0) scale(.48)"/>
+<use href="#mountain" transform="translate(293.4 288.4) scale(.48)"/>
+<use href="#mountain" transform="translate(296.6 284.9) scale(.48)"/>
+<use href="#mountain" transform="translate(299.8 282.3) scale(.48)"/>
+<use href="#mountain" transform="translate(303.0 281.1) scale(.48)"/>
+<use href="#mountain" transform="translate(306.2 281.5) scale(.48)"/>
+<use href="#mountain" transform="translate(309.4 283.5) scale(.48)"/>
+<use href="#mountain" transform="translate(312.6 286.6) scale(.48)"/>
+<use href="#mountain" transform="translate(315.8 290.2) scale(.48)"/>
+<use href="#mountain" transform="translate(319.0 293.6) scale(.48)"/>
+<use href="#mountain" transform="translate(322.2 296.0) scale(.48)"/>
+<use href="#mountain" transform="translate(325.4 297.0) scale(.48)"/>
+<use href="#mountain" transform="translate(328.6 296.3) scale(.48)"/>
+<use href="#mountain" transform="translate(331.8 294.1) scale(.48)"/>
+<use href="#mountain" transform="translate(335.0 290.8) scale(.48)"/>
+<use href="#mountain" transform="translate(338.2 287.1) scale(.48)"/>
+<use href="#tree" transform="translate(283.1 177.0) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(278.4 180.2) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(281.4 170.9) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(284.3 182.8) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(274.9 175.6) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(286.8 172.1) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(279.1 186.6) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(277.3 167.5) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(289.0 180.9) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(272.7 181.6) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(285.0 165.6) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(284.0 189.6) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(272.1 170.1) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(291.5 173.9) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(274.6 189.1) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(279.5 161.8) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(290.1 187.2) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(268.8 177.7) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(289.9 165.2) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(280.4 194.2) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(272.5 163.5) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(294.4 179.4) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(269.6 187.5) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(284.1 158.6) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(288.2 193.7) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(267.0 171.0) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(294.6 168.6) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(275.1 195.8) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(275.7 157.4) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(295.0 186.8) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(265.4 182.5) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(289.9 158.6) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(283.8 198.9) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(267.6 163.2) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(298.1 175.1) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(269.2 194.0) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(281.1 153.5) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(293.0 194.7) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(175.1 257.0) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(170.3 259.6) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(173.4 252.0) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(176.4 261.7) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(166.8 255.8) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(178.9 253.0) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(171.0 264.9) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(169.2 249.2) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(181.2 260.2) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(164.5 260.8) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(177.1 247.6) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(176.0 267.3) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(163.9 251.3) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(183.7 254.5) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(166.5 267.0) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(171.5 244.5) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(182.3 265.4) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(160.5 257.6) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(182.1 247.3) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(172.4 271.1) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(164.3 245.9) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(186.7 259.0) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(130.9 157.0) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(124.2 160.6) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(128.6 150.2) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(132.7 163.4) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(119.3 155.4) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(136.2 151.6) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(125.2 167.6) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(122.7 146.5) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(139.4 161.3) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(116.1 162.1) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(133.7 144.3) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(132.2 171.0) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(115.3 149.3) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(143.0 153.6) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(118.9 170.5) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(125.9 140.1) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(140.9 168.3) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(110.6 157.7) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(140.7 143.9) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(127.2 176.1) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(115.9 142.0) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(147.1 159.7) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(111.8 168.7) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(132.4 136.6) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(138.3 175.6) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(108.0 150.4) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(147.5 147.7) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(119.6 177.9) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(120.5 135.3) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(148.0 167.9) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(105.8 163.1) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(140.6 136.6) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(132.0 181.3) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(108.9 141.7) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(152.4 154.9) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(111.1 175.9) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(128.1 130.9) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(145.1 176.6) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(102.3 154.5) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(148.9 140.6) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(123.3 184.1) scale(.40)" opacity=".8"/>
+<use href="#tree" transform="translate(113.7 133.4) scale(.40)" opacity=".8"/>
+</g>
+<g stroke-width=".7" fill="#d0b184">
+<circle cx="137" cy="143" r="1.8"/><path d="M134 146h6"/>
+<circle cx="245" cy="152" r="1.8"/><path d="M242 155h6"/>
+<circle cx="159" cy="269" r="1.8"/><path d="M156 272h6"/>
+<circle cx="265" cy="308" r="1.8"/><path d="M262 311h6"/>
+<circle cx="328" cy="264" r="1.8"/><path d="M325 267h6"/>
+<circle cx="288" cy="132" r="1.8"/><path d="M285 135h6"/>
+</g>
+</g>
+<g fill="#302318" font-family="Georgia, 'Times New Roman', serif" text-anchor="middle">
+<text x="119" y="133" font-size="9" font-weight="bold" letter-spacing="0.7">THE SHIRE</text>
+<text x="252" y="144" font-size="8" font-weight="bold" letter-spacing="0.6">RIVENDELL</text>
+<text x="144" y="281" font-size="9" font-weight="bold" letter-spacing="1">ROHAN</text>
+<text x="265" y="324" font-size="9" font-weight="bold" letter-spacing="0.8">GONDOR</text>
+<text x="340" y="279" font-size="9" font-weight="bold" letter-spacing="0.8">MORDOR</text>
+<text x="274" y="214" font-size="7" letter-spacing=".4">MIRKWOOD</text>
+<text x="288" y="124" font-size="7" letter-spacing=".4">EREBOR</text>
+<text x="222" y="76" font-size="7" letter-spacing="1">THE NORTH</text>
+<text x="216" y="195" font-size="7" letter-spacing="1" transform="rotate(76 216 195)">MISTY MOUNTAINS</text>
+<text x="112" y="339" font-size="9" font-style="italic">The Great Sea</text>
+<text x="290" y="380" font-size="9" font-style="italic">Middle-earth</text>
+</g>
+<circle cx="225" cy="225" r="190" fill="url(#vignette)"/>
+<circle cx="225" cy="225" r="190" fill="#fff" filter="url(#grain)" opacity=".42"/>
+</g></svg>
