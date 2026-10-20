@@ -40,9 +40,24 @@ Set `CHROMIUM_PATH` if using a system Chromium/Chrome executable. See
 
 ## Remaining release blockers
 
-- The map is a stylized illustration and the bezel uses decorative motifs; visual fidelity still needs review.
+- The map is a stylized illustration and the bezel uses decorative motifs; the first visual review below identifies remaining fidelity work.
 - No Galaxy Watch7 test is recorded. Date rollover, live health sources, empty states, provider selection, app launching and AOD readability remain unverified on device.
 - CI uses a temporary debug certificate; update compatibility with an installed APK is not guaranteed. A retained LOTR signing strategy needs separate agreement.
 - Keep the package ID/version unchanged. Main merge and final release require separate user approval.
 
 Follow the [Watch7 checklist](MIDDLE-EARTH.md#galaxy-watch7-próba--ha-az-óra-fel-van-töltve) for device evidence.
+
+## First visual review – 2026-10-20
+
+Generated and visually inspected all four 432/480 px active/ambient illustrations
+against `references/one-ring.jpg`. Local rasterization used Chromium 153.0.8010.0;
+the installed fallback font differs from CI, so the existing text check exposed
+an overflow that the previous CI did not catch. No physical watch was used.
+
+- **Fixed:** `NYITÁS` was 38.70 px wide in a 36.48 px available text area at 432 px. Reduced only that caption from 10 to 9 logical units in both workout renderers (`SHORT_TEXT` and `LONG_TEXT`); the slot bounds, IDs, provider and tap behavior are unchanged. Existing text checks now pass at both sizes.
+- **Active:** all five fields stay inside the bezel. The sparse repeated terrain symbols, dashed region shapes and large map labels differ substantially from the reference's dense ink cartography. The four repeated bezel glyph shapes also need more flowing engraving detail.
+- **Ambient illustration:** the map, data fields and second hand are absent; the two main hands remain distinguishable in these generated images. This is not a native rendering or power-use result.
+- **Preview fidelity to audit:** the preview draws hands after the fields, whereas the WFF lists the slots after the clock. Its hard-coded bezel alpha also needs comparison with native WFF semantics before treating the ambient illustration as representative.
+
+Next visual step: improve one artwork layer at a time, starting with the bezel
+engraving, while keeping the native scaffold and the five existing slots.
