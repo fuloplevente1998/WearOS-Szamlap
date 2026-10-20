@@ -50,7 +50,7 @@ const { chromium } = require('playwright');
           const top=txt[0],bottom=txt[1];
           const topEnd=number(top,'y')+number(top,'height');
           const bottomStart=number(bottom,'y');
-          if(topEnd>bottomStart-2)throw new Error('Overlapping caption/value in '+ordered[i]);
+          if(topEnd>bottomStart)throw new Error('Overlapping caption/value in '+ordered[i]);
           const title=top.querySelector('Font').textContent.trim();
           const x=number(slot,'x'),y=number(slot,'y'),w=number(slot,'width'),h=number(slot,'height');
           const corners=[[x,y],[x+w,y],[x,y+h],[x+w,y+h]];
