@@ -46,10 +46,26 @@ jobs:
           node-version: '24'
           cache: npm
       - run: npm ci --ignore-scripts
+      - name: Rasterize One Ring layered artwork
+        env:
+          CHROMIUM_PATH: /usr/bin/google-chrome
+        run: node scripts/render-lotr-assets.cjs
       - name: Verify WFF and test APK
         env:
           CHROMIUM_PATH: /usr/bin/google-chrome
         run: bash scripts/verify.sh
+      - name: Validate native LOTR WFF and build independent APK
+        run: |
+          java -jar .tools/wff/wff-validator.jar 2 --stop-on-fail lotrwatchface/src/main/res/raw/watchface.xml > dist/verify/lotr-schema.txt 2>&1
+          ./gradlew --no-daemon --console plain :lotrwatchface:assembleDebug :lotrwatchface:lintDebug > dist/verify/lotr-build.txt 2>&1
+      - name: Upload LOTR debug APK
+        if: success()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: lotr-one-ring-${{ github.sha }}
+          path: lotrwatchface/build/outputs/apk/debug/*.apk
+          retention-days: 14
+          if-no-files-found: error
       - name: Upload checked snapshot and reports
         if: always() && hashFiles('dist/verify/*') != ''
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
