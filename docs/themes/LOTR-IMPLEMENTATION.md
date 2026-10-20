@@ -61,3 +61,14 @@ an overflow that the previous CI did not catch. No physical watch was used.
 
 Next visual step: improve one artwork layer at a time, starting with the bezel
 engraving, while keeping the native scaffold and the five existing slots.
+
+## Bezel engraving refinement – 2026-10-20
+
+- Replaced the four repeating angular motifs with twelve curved calligraphic path forms, arranged as 58 marks in four spaced phrases. These are decorative Elvish-inspired marks, **not a verified transcription of the Ring inscription**.
+- Added a dark engraved cut, warm gold infill and a fine edge highlight. Paths are font-independent and rasterized once; there is no runtime animation or additional WFF layer.
+- Preserved the existing ring geometry, metal gradients, map, hands and native complication implementation. Package ID and version are unchanged.
+- Regenerated and visually inspected 432/480 active and ambient illustrations. Existing 20 text bounds checks and the native slot checks pass locally.
+- Pixel comparison with the preceding revision confirms that changes in all four illustrations are confined to the engraving band (logical radius 194–216). The inner map, fields and hands are unchanged.
+- The result is a finer decorative treatment; authentic inscription fidelity, detailed map artwork, preview/native layer order and AOD semantics still need further work. Watch7 rendering and power use remain untested.
+
+Next step: refine the parchment map toward the reference's denser cartography.
