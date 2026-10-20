@@ -85,3 +85,17 @@ Next step: refine the parchment map toward the reference's denser cartography.
 Next step: audit preview/native drawing order and ambient alpha semantics before
 further visual decisions. Device rendering and live complication behavior remain
 pending Galaxy Watch7 testing.
+
+## Native/preview order and ambient fix – 2026-10-20
+
+- Confirmed [WFF scene traversal order](https://developer.android.com/training/wearables/wff/effects) and the [integer 0–255 PartImage alpha scale](https://developer.android.com/reference/wear-os/wff/group/part/image/part-image) against Android's documentation.
+- Moved the existing native clock and hub after the five slots. Opaque complication backgrounds can no longer draw over the hands; the hub remains last. Slot IDs, bounds and provider policies are unchanged.
+- Corrected the native ambient bezel alpha from `0.35` (not 35% on this scale) to `89`, approximately 35% opacity. Map, fields and second hand remain hidden in ambient.
+- The limited illustration renderer now traverses the XML scene order and reads mode alpha, scene background, preview time, hand geometry/pivots and hub geometry from WFF. Unknown scene elements fail explicitly. Complication samples and their simplified text/frame rendering are still illustrative, not a complete Wear OS renderer.
+- Added per-size active/ambient drawing traces to `layout-report.json`; ambient traces contain only the bezel, hour/minute hands and hub.
+- Extended static checks for integer alpha, hidden ambient elements, centered pivots and foreground hand/hub order. Six temporary regression mutations (fractional alpha, visible map/slot/seconds, wrong clock order and offset pivot) were all rejected.
+- Regenerated and visually inspected all four 432/480 illustrations; all 20 existing text checks pass locally. HALO sources, artwork, package ID and version are unchanged.
+
+Next step: audit native complication data types and fallbacks, especially
+textless ranged battery data and date/app shortcut compatibility. Live data,
+tap behavior, native rendering and power use still require Galaxy Watch7 tests.

@@ -10,19 +10,9 @@
         </PartImage>
         <PartImage x="0" y="0" width="450" height="450">
             <Image resource="lotr_one_ring_bezel"/>
-            <Variant mode="AMBIENT" target="alpha" value="0.35"/>
+            <Variant mode="AMBIENT" target="alpha" value="89"/>
         </PartImage>
-        <AnalogClock x="0" y="0" width="450" height="450">
-            <HourHand resource="lotr_hour_hand" x="213" y="113" width="24" height="125" pivotX="0.5" pivotY="0.896"/>
-            <MinuteHand resource="lotr_minute_hand" x="216" y="53" width="18" height="190" pivotX="0.5" pivotY="0.905263"/>
-            <SecondHand resource="lotr_second_hand" x="222" y="55" width="6" height="196" pivotX="0.5" pivotY="0.867347">
-                <Variant mode="AMBIENT" target="alpha" value="0"/>
-            </SecondHand>
-        </AnalogClock>
-        <PartDraw x="0" y="0" width="450" height="450">
-            <Ellipse x="219" y="219" width="12" height="12"><Fill color="#4D321B"/></Ellipse>
-            <Ellipse x="222" y="222" width="6" height="6"><Fill color="#D8BC74"/></Ellipse>
-        </PartDraw>
+
 <ComplicationSlot x="182" y="87" width="86" height="42" slotId="0" displayName="lotr_battery_slot" supportedTypes="SHORT_TEXT RANGED_VALUE LONG_TEXT EMPTY" isCustomizable="TRUE">
 <Variant mode="AMBIENT" target="alpha" value="0"/>
 <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="SHORT_TEXT"/>
@@ -87,5 +77,17 @@
 </PartText><PartText x="2" y="23" width="42" height="17">
 <Text align="CENTER" ellipsis="TRUE" maxLines="1"><Font family="sans-serif" size="9" weight="BOLD" color="#342317">NYITÁS</Font></Text>
 </PartText></Group></Complication><Complication type="EMPTY"></Complication></ComplicationSlot>
+        <!-- Draw time above the editable fields so their opaque backgrounds cannot hide the hands. -->
+        <AnalogClock x="0" y="0" width="450" height="450">
+            <HourHand resource="lotr_hour_hand" x="213" y="113" width="24" height="125" pivotX="0.5" pivotY="0.896"/>
+            <MinuteHand resource="lotr_minute_hand" x="216" y="53" width="18" height="190" pivotX="0.5" pivotY="0.905263"/>
+            <SecondHand resource="lotr_second_hand" x="222" y="55" width="6" height="196" pivotX="0.5" pivotY="0.867347">
+                <Variant mode="AMBIENT" target="alpha" value="0"/>
+            </SecondHand>
+        </AnalogClock>
+        <PartDraw x="0" y="0" width="450" height="450">
+            <Ellipse x="219" y="219" width="12" height="12"><Fill color="#4D321B"/></Ellipse>
+            <Ellipse x="222" y="222" width="6" height="6"><Fill color="#D8BC74"/></Ellipse>
+        </PartDraw>
     </Scene>
 </WatchFace>

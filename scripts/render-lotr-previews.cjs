@@ -35,9 +35,21 @@ const { chromium } = require('playwright');
       }
       const output=[];
       const checks=[];
+      const scene=parsed.querySelector('Scene');
+      const sceneChecks=[];
+      const previewTime=parsed.querySelector('Metadata[key="PREVIEW_TIME"]').getAttribute('value').split(':').map(Number);
+      const [hour,minute,second]=previewTime;
+      const angles={HourHand:((hour%12)+(minute+second/60)/60)*30,MinuteHand:(minute+second/60)*6,SecondHand:second*6};
       const testCanvas=document.createElement('canvas');
       const measure=testCanvas.getContext('2d');
       function number(el,attr){return Number(el.getAttribute(attr));}
+      // WFF alpha is 0..255, unlike Canvas's 0..1. Only the current mode applies.
+      function alpha(el,ambient){
+        const variant=ambient?[...el.children].find(v=>v.tagName==='Variant'&&v.getAttribute('mode')==='AMBIENT'&&v.getAttribute('target')==='alpha'):null;
+        const value=variant?Number(variant.getAttribute('value')):Number(el.getAttribute('alpha')??255);
+        if(!Number.isInteger(value)||value<0||value>255)throw new Error('WFF alpha must be an integer in 0..255');
+        return value/255;
+      }
       for(const size of [432,480]){
         const scale=size/450;
         for(let i=0;i<slots.length;i++){
@@ -70,15 +82,22 @@ const { chromium } = require('playwright');
         for(const ambient of [false,true]){
           const canvas=document.createElement('canvas');canvas.width=size;canvas.height=size;
           const ctx=canvas.getContext('2d');
-          ctx.fillStyle='#26190e';ctx.fillRect(0,0,size,size);
+          ctx.fillStyle=scene.getAttribute('backgroundColor');ctx.fillRect(0,0,size,size);
           ctx.save();ctx.scale(scale,scale);
           ctx.beginPath();ctx.arc(225,225,225,0,Math.PI*2);ctx.clip();
-          if(!ambient)ctx.drawImage(images.lotr_middle_earth_map,0,0,450,450);
-          ctx.save();ctx.globalAlpha=ambient?.35:1;
-          ctx.drawImage(images.lotr_one_ring_bezel,0,0,450,450);
-          ctx.restore();
-          if(!ambient){
-            slots.forEach((slot,i)=>{
+          const drawn=[];
+          // This is a limited illustration renderer, not a complete WFF runtime.
+          // Walk the source scene order and reject unsupported new scene elements.
+          for(const element of scene.children){
+            const opacity=alpha(element,ambient);
+            if(opacity===0)continue;
+            ctx.save();ctx.globalAlpha=opacity;
+            if(element.tagName==='PartImage'){
+              const resource=element.querySelector('Image').getAttribute('resource');
+              ctx.drawImage(images[resource],number(element,'x'),number(element,'y'),number(element,'width'),number(element,'height'));
+              drawn.push({layer:resource,alpha:opacity});
+            }else if(element.tagName==='ComplicationSlot'){
+              const slot=element,i=slots.indexOf(slot);
               const x=number(slot,'x'),y=number(slot,'y'),w=number(slot,'width'),h=number(slot,'height');
               const p=(slot.querySelector('Complication[type="SHORT_TEXT"]')||slot.querySelector('Complication[type="LONG_TEXT"]'));
               const txt=[...p.querySelectorAll('PartText')];
@@ -92,24 +111,37 @@ const { chromium } = require('playwright');
                 ctx.font='700 '+size+'px sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';
                 ctx.fillStyle='#342317';ctx.fillText(text,px+number(part,'width')/2,py+number(part,'height')/2);
               });
-            });
-          }
-          function hand(name,degrees,w,h,px,py) {
-            ctx.save();ctx.translate(225,225);ctx.rotate(degrees*Math.PI/180);
-            ctx.drawImage(images[name],-w*px,-h*py,w,h);
+              drawn.push({layer:slot.getAttribute('displayName'),alpha:opacity});
+            }else if(element.tagName==='AnalogClock'){
+              for(const hand of element.children){
+                const handAlpha=alpha(hand,ambient);
+                if(handAlpha===0)continue;
+                if(!(hand.tagName in angles))throw new Error('Unsupported clock child: '+hand.tagName);
+                const w=number(hand,'width'),h=number(hand,'height'),px=number(hand,'pivotX'),py=number(hand,'pivotY');
+                ctx.save();ctx.globalAlpha*=handAlpha;
+                ctx.translate(number(element,'x')+number(hand,'x')+w*px,number(element,'y')+number(hand,'y')+h*py);
+                ctx.rotate(angles[hand.tagName]*Math.PI/180);
+                ctx.drawImage(images[hand.getAttribute('resource')],-w*px,-h*py,w,h);
+                ctx.restore();drawn.push({layer:hand.tagName,alpha:opacity*handAlpha});
+              }
+            }else if(element.tagName==='PartDraw'){
+              ctx.translate(number(element,'x'),number(element,'y'));
+              for(const ellipse of element.children){
+                if(ellipse.tagName!=='Ellipse')throw new Error('Unsupported hub primitive: '+ellipse.tagName);
+                const w=number(ellipse,'width'),h=number(ellipse,'height');
+                ctx.fillStyle=ellipse.querySelector('Fill').getAttribute('color');
+                ctx.beginPath();ctx.ellipse(number(ellipse,'x')+w/2,number(ellipse,'y')+h/2,w/2,h/2,0,0,Math.PI*2);ctx.fill();
+              }
+              drawn.push({layer:'hub',alpha:opacity});
+            }else throw new Error('Unsupported scene element: '+element.tagName);
             ctx.restore();
           }
-          // 10:08:30 reference position. Native rotation is handled by WFF, not this preview.
-          hand('lotr_hour_hand',304.25,24,125,.5,.896);
-          hand('lotr_minute_hand',51,18,190,.5,.905263);
-          if(!ambient)hand('lotr_second_hand',180,6,196,.5,.867347);
-          ctx.fillStyle='#4D321B';ctx.beginPath();ctx.arc(225,225,6,0,Math.PI*2);ctx.fill();
-          ctx.fillStyle='#D8BC74';ctx.beginPath();ctx.arc(225,225,3,0,Math.PI*2);ctx.fill();
+          sceneChecks.push({size,mode:ambient?'ambient':'active',drawn});
           ctx.restore();
           output.push({filename:'one-ring-'+size+(ambient?'-ambient':'-active')+'.png',base64:canvas.toDataURL('image/png').split(',')[1]});
         }
       }
-      return {output,checks,note:'Raster previews with illustrative sample values; not Wear OS runtime capture.'};
+      return {output,checks,sceneChecks,note:'Raster previews with illustrative sample values; not Wear OS runtime capture.'};
     },{xml,assets});
     for(const item of results.output)fs.writeFileSync(path.join(out,item.filename),Buffer.from(item.base64,'base64'));
     // The Wear OS picker must display THIS revision, not the old mockup with static hands.
@@ -117,7 +149,7 @@ const { chromium } = require('playwright');
     const picker = results.output.find(item => item.filename === 'one-ring-432-active.png');
     if (!picker) throw new Error('Missing generated watch-face picker preview');
     fs.writeFileSync(path.join(drawable,'lotr_preview.png'), Buffer.from(picker.base64,'base64'));
-    fs.writeFileSync(path.join(out,'layout-report.json'),JSON.stringify({checks:results.checks,note:results.note},null,2)+'\n');
+    fs.writeFileSync(path.join(out,'layout-report.json'),JSON.stringify({checks:results.checks,sceneChecks:results.sceneChecks,note:results.note},null,2)+'\n');
     console.log('PASS: 432/480 px sample text bounds and non-overlapping rows; '+results.output.length+' active/ambient previews generated');
   }finally{await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});
