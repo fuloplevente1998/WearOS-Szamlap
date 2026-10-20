@@ -57,6 +57,7 @@ jobs:
       - name: Validate native LOTR WFF and build independent APK
         run: |
           python3 scripts/check-lotr.py
+          CHROMIUM_PATH=/usr/bin/google-chrome node scripts/render-lotr-previews.cjs
           java -jar .tools/wff/wff-validator.jar 2 --stop-on-fail lotrwatchface/src/main/res/raw/watchface.xml > dist/verify/lotr-schema.txt 2>&1
           ./gradlew --no-daemon --console plain :lotrwatchface:assembleDebug :lotrwatchface:lintDebug > dist/verify/lotr-build.txt 2>&1
       - name: Upload LOTR debug APK
@@ -74,6 +75,7 @@ jobs:
           name: wearos-${{ github.sha }}
           path: |
             dist/verify/
+            dist/lotr-preview/
             dist/geometry-checks-*.json
             dist/spartan-night-*.png
           retention-days: 14

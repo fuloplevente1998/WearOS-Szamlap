@@ -78,13 +78,13 @@
 <ComplicationSlot x="299" y="294" width="46" height="46" slotId="4" displayName="lotr_workout_slot" supportedTypes="LONG_TEXT SHORT_TEXT EMPTY" isCustomizable="TRUE">
 <Variant mode="AMBIENT" target="alpha" value="0"/>
 <DefaultProviderPolicy defaultSystemProvider="APP_SHORTCUT" defaultSystemProviderType="LONG_TEXT"/>
-<BoundingBox x="0" y="0" width="46" height="46"/><Complication type="LONG_TEXT"><Group x="0" y="0" width="46" height="46" name="lotr_workout_display"><PartDraw x="0" y="0" width="46" height="46"><Rectangle x="0" y="0" width="46" height="46"><Fill color="#CCB28A"/><Stroke color="#6E4927" thickness="1.1"/></Rectangle><Rectangle x="3" y="3" width="40" height="40"><Stroke color="#E6C796" thickness="0.55"/></Rectangle></PartDraw><PartText x="2" y="10" width="42" height="13">
+<BoundingBox x="0" y="0" width="46" height="46"/><Complication type="LONG_TEXT"><Group x="0" y="0" width="46" height="46" name="lotr_workout_display"><PartDraw x="0" y="0" width="46" height="46"><Rectangle x="0" y="0" width="46" height="46"><Fill color="#CCB28A"/><Stroke color="#6E4927" thickness="1.1"/></Rectangle><Rectangle x="3" y="3" width="40" height="40"><Stroke color="#E6C796" thickness="0.55"/></Rectangle></PartDraw><PartText x="2" y="5" width="42" height="13">
 <Text align="CENTER" ellipsis="TRUE" maxLines="1"><Font family="sans-serif" size="10" weight="BOLD" color="#342317">EDZÉS</Font></Text>
-</PartText><PartText x="2" y="17" width="42" height="18">
+</PartText><PartText x="2" y="23" width="42" height="17">
 <Text align="CENTER" ellipsis="TRUE" maxLines="1"><Font family="sans-serif" size="10" weight="BOLD" color="#342317">NYITÁS</Font></Text>
-</PartText></Group></Complication><Complication type="SHORT_TEXT"><Group x="0" y="0" width="46" height="46" name="lotr_workout_display"><PartDraw x="0" y="0" width="46" height="46"><Rectangle x="0" y="0" width="46" height="46"><Fill color="#CCB28A"/><Stroke color="#6E4927" thickness="1.1"/></Rectangle><Rectangle x="3" y="3" width="40" height="40"><Stroke color="#E6C796" thickness="0.55"/></Rectangle></PartDraw><PartText x="2" y="10" width="42" height="13">
+</PartText></Group></Complication><Complication type="SHORT_TEXT"><Group x="0" y="0" width="46" height="46" name="lotr_workout_display"><PartDraw x="0" y="0" width="46" height="46"><Rectangle x="0" y="0" width="46" height="46"><Fill color="#CCB28A"/><Stroke color="#6E4927" thickness="1.1"/></Rectangle><Rectangle x="3" y="3" width="40" height="40"><Stroke color="#E6C796" thickness="0.55"/></Rectangle></PartDraw><PartText x="2" y="5" width="42" height="13">
 <Text align="CENTER" ellipsis="TRUE" maxLines="1"><Font family="sans-serif" size="10" weight="BOLD" color="#342317">EDZÉS</Font></Text>
-</PartText><PartText x="2" y="17" width="42" height="18">
+</PartText><PartText x="2" y="23" width="42" height="17">
 <Text align="CENTER" ellipsis="TRUE" maxLines="1"><Font family="sans-serif" size="10" weight="BOLD" color="#342317">NYITÁS</Font></Text>
 </PartText></Group></Complication><Complication type="EMPTY"></Complication></ComplicationSlot>
     </Scene>
