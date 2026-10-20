@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WatchFace width="450" height="450" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="ANALOG" />
+  <Metadata key="PREVIEW_TIME" value="10:08:42" />
+  <UserConfigurations>
+    <BooleanConfiguration id="show_seconds" displayName="show_seconds" defaultValue="TRUE" />
+    <BooleanConfiguration id="show_map" displayName="show_map" defaultValue="TRUE" />
+    <BooleanConfiguration id="tengwar_glow" displayName="tengwar_glow" defaultValue="TRUE" />
+  </UserConfigurations>
+  <Scene backgroundColor="#000000">
+    <Group x="0" y="0" width="450" height="450" name="active_bg">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <BooleanConfiguration id="show_map">
+        <BooleanOption id="TRUE">
+          <PartImage x="0" y="0" width="450" height="450">
+            <Image resource="lotr_map_background" />
+          </PartImage>
+        </BooleanOption>
+      </BooleanConfiguration>
+      <BooleanConfiguration id="tengwar_glow">
+        <BooleanOption id="TRUE">
+          <PartImage x="0" y="0" width="450" height="450">
+            <Image resource="lotr_ring_tengwar" />
+          </PartImage>
+        </BooleanOption>
+      </BooleanConfiguration>
+    </Group>
+
+    <Group x="0" y="0" width="450" height="450" name="ambient_bg" alpha="0">
+      <Variant mode="AMBIENT" target="alpha" value="128" />
+      <PartImage x="0" y="0" width="450" height="450">
+        <Image resource="lotr_ring_tengwar" />
+      </PartImage>
+    </Group>
+
+    <Group x="125" y="105" width="200" height="40" name="date_group">
+      <PartText x="0" y="0" width="200" height="40">
+        <Text align="CENTER" ellipsis="TRUE" maxLines="1">
+          <Font family="sans-serif" size="16" weight="BOLD" color="#ffaa00">
+            <Template>%s<Parameter expression="icuText(&quot;EEE, MMM d&quot;)" />
+            </Template>
+          </Font>
+        </Text>
+      </PartText>
+    </Group>
+
+    <ComplicationSlot x="145" y="145" width="160" height="40" slotId="0" displayName="top_slot" supportedTypes="SHORT_TEXT RANGED_VALUE LONG_TEXT EMPTY" isCustomizable="TRUE">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="RANGED_VALUE" />
+      <BoundingBox x="0" y="0" width="160" height="40" />
+      <Complication type="SHORT_TEXT">
+        <Group x="0" y="0" width="160" height="40" name="top_short_text">
+          <PartText x="0" y="0" width="160" height="20">
+            <Text align="CENTER" ellipsis="TRUE" maxLines="1">
+              <Font family="sans-serif" size="13" weight="NORMAL" color="#ffaa00">
+                <Template>%s<Parameter expression="[COMPLICATION.TITLE] != null ? [COMPLICATION.TITLE] : &quot;BATTERY&quot;" /></Template>
+              </Font>
+            </Text>
+          </PartText>
+          <PartText x="0" y="20" width="160" height="20">
+            <Text align="CENTER" ellipsis="FALSE" maxLines="1">
+              <Font family="sans-serif" size="15" weight="BOLD" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT] != null ? [COMPLICATION.TEXT] : &quot;--&quot;" /></Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Complication type="RANGED_VALUE">
+        <Group x="0" y="0" width="160" height="40" name="top_ranged_value">
+          <PartText x="0" y="0" width="160" height="20">
+            <Text align="CENTER" ellipsis="TRUE" maxLines="1">
+              <Font family="sans-serif" size="13" weight="NORMAL" color="#ffaa00">
+                <Template>%s<Parameter expression="[COMPLICATION.TITLE] != null ? [COMPLICATION.TITLE] : &quot;LEVEL&quot;" /></Template>
+              </Font>
+            </Text>
+          </PartText>
+          <PartText x="0" y="20" width="160" height="20">
+            <Text align="CENTER" ellipsis="FALSE" maxLines="1">
+              <Font family="sans-serif" size="15" weight="BOLD" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT] != null ? [COMPLICATION.TEXT] : &quot;--&quot;" /></Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Complication type="LONG_TEXT">
+        <Group x="0" y="0" width="160" height="40" name="top_long_text">
+          <PartText x="0" y="10" width="160" height="20">
+            <Text align="CENTER" ellipsis="TRUE" maxLines="1">
+              <Font family="sans-serif" size="14" weight="BOLD" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT] != null ? [COMPLICATION.TEXT] : &quot;--&quot;" /></Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Complication type="EMPTY" />
+    </ComplicationSlot>
+
+    <ComplicationSlot x="145" y="270" width="160" height="40" slotId="1" displayName="bottom_slot" supportedTypes="SHORT_TEXT RANGED_VALUE LONG_TEXT EMPTY" isCustomizable="TRUE">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <BoundingBox x="0" y="0" width="160" height="40" />
+      <Complication type="SHORT_TEXT">
+        <Group x="0" y="0" width="160" height="40" name="bottom_short_text">
+          <PartText x="0" y="0" width="160" height="20">
+            <Text align="CENTER" ellipsis="TRUE" maxLines="1">
+              <Font family="sans-serif" size="13" weight="NORMAL" color="#ffaa00">
+                <Template>%s<Parameter expression="[COMPLICATION.TITLE] != null ? [COMPLICATION.TITLE] : &quot;STEPS&quot;" /></Template>
+              </Font>
+            </Text>
+          </PartText>
+          <PartText x="0" y="20" width="160" height="20">
+            <Text align="CENTER" ellipsis="FALSE" maxLines="1">
+              <Font family="sans-serif" size="15" weight="BOLD" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT] != null ? [COMPLICATION.TEXT] : &quot;--&quot;" /></Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Complication type="RANGED_VALUE">
+        <Group x="0" y="0" width="160" height="40" name="bottom_ranged_value">
+          <PartText x="0" y="0" width="160" height="20">
+            <Text align="CENTER" ellipsis="TRUE" maxLines="1">
+              <Font family="sans-serif" size="13" weight="NORMAL" color="#ffaa00">
+                <Template>%s<Parameter expression="[COMPLICATION.TITLE] != null ? [COMPLICATION.TITLE] : &quot;PROGRESS&quot;" /></Template>
+              </Font>
+            </Text>
+          </PartText>
+          <PartText x="0" y="20" width="160" height="20">
+            <Text align="CENTER" ellipsis="FALSE" maxLines="1">
+              <Font family="sans-serif" size="15" weight="BOLD" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT] != null ? [COMPLICATION.TEXT] : &quot;--&quot;" /></Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Complication type="LONG_TEXT">
+        <Group x="0" y="0" width="160" height="40" name="bottom_long_text">
+          <PartText x="0" y="10" width="160" height="20">
+            <Text align="CENTER" ellipsis="TRUE" maxLines="1">
+              <Font family="sans-serif" size="14" weight="BOLD" color="#ffd700">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT] != null ? [COMPLICATION.TEXT] : &quot;--&quot;" /></Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Complication type="EMPTY" />
+    </ComplicationSlot>
+
+    <AnalogClock x="0" y="0" width="450" height="450">
+      <HourHand resource="lotr_hand_hour" x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" />
+      <MinuteHand resource="lotr_hand_minute" x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5" />
+      <SecondHand resource="lotr_hand_second" x="0" y="0" width="450" height="450" pivotX="0.5" pivotY="0.5">
+        <Variant mode="AMBIENT" target="alpha" value="0" />
+      </SecondHand>
+    </AnalogClock>
+
+    <PartImage x="0" y="0" width="450" height="450">
+      <Image resource="lotr_center_cap" />
+    </PartImage>
+  </Scene>
+</WatchFace>

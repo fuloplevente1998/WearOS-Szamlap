@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">The One Ring</string>
+    <string name="tengwar_glow">Tengwar Inscription Glow</string>
+    <string name="show_seconds">Second Hand</string>
+    <string name="show_map">Middle-earth Map Background</string>
+    <string name="top_slot">Top Complication</string>
+    <string name="bottom_slot">Bottom Complication</string>
+    <string name="left_slot">Left Complication</string>
+    <string name="right_slot">Right Complication</string>
+</resources>

@@ -6,4 +6,4 @@ dependencyResolutionManagement {
     repositories { google(); mavenCentral() }
 }
 rootProject.name = "SpartanNight"
-include(":watchface")
+include(":watchface", ":lotr")

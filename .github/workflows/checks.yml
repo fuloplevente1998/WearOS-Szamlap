@@ -6,6 +6,14 @@ on:
   pull_request:
   workflow_dispatch:
     inputs:
+      watch_face:
+        description: 'Select watch face to build/publish'
+        type: choice
+        options:
+          - both
+          - halo
+          - lotr
+        default: both
       publish_test_release:
         description: Publish the locally signed and verified test APK
         type: boolean
@@ -46,25 +54,35 @@ jobs:
           node-version: '24'
           cache: npm
       - run: npm ci --ignore-scripts
-      - name: Verify WFF and test APK
+      - name: Verify WFF and test APKs
         env:
           CHROMIUM_PATH: /usr/bin/google-chrome
         run: bash scripts/verify.sh
-      - name: Upload checked snapshot and reports
-        if: always() && hashFiles('dist/verify/*') != ''
+      - name: Upload HALO artifact
+        if: (always()) && (github.event_name != 'workflow_dispatch' || inputs.watch_face == 'halo' || inputs.watch_face == 'both') && hashFiles('watchface/build/outputs/apk/debug/*') != ''
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
-          name: wearos-${{ github.sha }}
+          name: halo-watchface-${{ github.sha }}
           path: |
+            watchface/build/outputs/apk/debug/watchface-debug.apk
             dist/verify/
-            dist/geometry-checks-*.json
             dist/spartan-night-*.png
+          retention-days: 14
+          if-no-files-found: error
+      - name: Upload LOTR artifact
+        if: (always()) && (github.event_name != 'workflow_dispatch' || inputs.watch_face == 'lotr' || inputs.watch_face == 'both') && hashFiles('lotr/build/outputs/apk/debug/*') != ''
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: lotr-watchface-${{ github.sha }}
+          path: |
+            lotr/build/outputs/apk/debug/lotr-debug.apk
+            dist/lotr-mockup-*.png
           retention-days: 14
           if-no-files-found: error
 
   publish:
     name: Publish test prerelease
-    if: github.event_name == 'workflow_dispatch' && inputs.publish_test_release && github.ref == 'refs/heads/main'
+    if: github.event_name == 'workflow_dispatch' && inputs.publish_test_release && github.ref == 'refs/heads/main' && (inputs.watch_face == 'halo' || inputs.watch_face == 'both')
     needs: verify
     runs-on: ubuntu-24.04
     timeout-minutes: 10
