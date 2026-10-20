@@ -72,3 +72,16 @@ engraving, while keeping the native scaffold and the five existing slots.
 - The result is a finer decorative treatment; authentic inscription fidelity, detailed map artwork, preview/native layer order and AOD semantics still need further work. Watch7 rendering and power use remain untested.
 
 Next step: refine the parchment map toward the reference's denser cartography.
+
+## Parchment map detail pass – 2026-10-20
+
+- Refined the existing mountain/tree symbols and added smaller ridgelines, clustered woodland, river branches, contour/coast hatching and settlement marks. The existing map layer and parchment treatment remain in use.
+- Reduced the opacity and weight of the large region shapes and removed their dashed outlines, so they no longer dominate the ink details.
+- Repositioned and reduced the main place names to avoid the five complication rectangles; added small Mirkwood, Erebor and northern-region labels. All 11 map label bounds were measured with local Chromium and avoid the native slot bounds.
+- This remains a stylized Middle-earth illustration, not an exact geographic or artistic reproduction of the reference.
+- Regenerated and visually inspected all four 432/480 active/ambient illustrations. Existing 20 complication text checks and native slot checks pass locally.
+- Pixel comparison confirms active changes stay within the map circle (logical radius below 191); both ambient illustrations are pixel-identical to the preceding revision. The bezel, WFF, package ID, version and HALO sources are unchanged.
+
+Next step: audit preview/native drawing order and ambient alpha semantics before
+further visual decisions. Device rendering and live complication behavior remain
+pending Galaxy Watch7 testing.
