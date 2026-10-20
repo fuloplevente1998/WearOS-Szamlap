@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WatchFace width="450" height="450" clipShape="CIRCLE">
+    <Metadata key="CLOCK_TYPE" value="ANALOG"/>
+    <Metadata key="PREVIEW_TIME" value="10:08:30"/>
+    <Scene backgroundColor="#C5A67C">
+        <!-- First-stage native ring. Fine Elvish inscription and authentic parchment map are separate later assets. -->
+        <PartDraw x="0" y="0" width="450" height="450">
+            <Ellipse x="0" y="0" width="450" height="450"><Fill color="#352315"/></Ellipse>
+            <Ellipse x="3" y="3" width="444" height="444"><Fill color="#7D5527"/></Ellipse>
+            <Ellipse x="8" y="8" width="434" height="434"><Fill color="#D8BC74"/></Ellipse>
+            <Ellipse x="12" y="12" width="426" height="426"><Fill color="#AA7C34"/></Ellipse>
+            <Ellipse x="23" y="23" width="404" height="404"><Fill color="#805322"/></Ellipse>
+            <Ellipse x="30" y="30" width="390" height="390"><Fill color="#C9A25B"/></Ellipse>
+            <Ellipse x="35" y="35" width="380" height="380"><Fill color="#C5A67C"/></Ellipse>
+            <Ellipse x="41" y="41" width="368" height="368"><Stroke color="#826037" thickness="1.5"/></Ellipse>
+        </PartDraw>
+        <AnalogClock x="0" y="0" width="450" height="450">
+            <HourHand resource="lotr_hour_hand" x="213" y="113" width="24" height="125" pivotX="0.5" pivotY="0.896"/>
+            <MinuteHand resource="lotr_minute_hand" x="216" y="53" width="18" height="190" pivotX="0.5" pivotY="0.905263"/>
+            <SecondHand resource="lotr_second_hand" x="222" y="55" width="6" height="196" pivotX="0.5" pivotY="0.867347">
+                <Variant mode="AMBIENT" target="alpha" value="0"/>
+            </SecondHand>
+        </AnalogClock>
+        <PartDraw x="0" y="0" width="450" height="450">
+            <Ellipse x="219" y="219" width="12" height="12"><Fill color="#4D321B"/></Ellipse>
+            <Ellipse x="222" y="222" width="6" height="6"><Fill color="#D8BC74"/></Ellipse>
+        </PartDraw>
+    </Scene>
+</WatchFace>
