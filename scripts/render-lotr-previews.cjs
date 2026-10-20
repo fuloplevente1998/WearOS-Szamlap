@@ -112,6 +112,11 @@ const { chromium } = require('playwright');
       return {output,checks,note:'Raster previews with illustrative sample values; not Wear OS runtime capture.'};
     },{xml,assets});
     for(const item of results.output)fs.writeFileSync(path.join(out,item.filename),Buffer.from(item.base64,'base64'));
+    // The Wear OS picker must display THIS revision, not the old mockup with static hands.
+    // Preview-only samples are intentional; watch runtime values always come from providers.
+    const picker = results.output.find(item => item.filename === 'one-ring-432-active.png');
+    if (!picker) throw new Error('Missing generated watch-face picker preview');
+    fs.writeFileSync(path.join(drawable,'lotr_preview.png'), Buffer.from(picker.base64,'base64'));
     fs.writeFileSync(path.join(out,'layout-report.json'),JSON.stringify({checks:results.checks,note:results.note},null,2)+'\n');
     console.log('PASS: 432/480 px sample text bounds and non-overlapping rows; '+results.output.length+' active/ambient previews generated');
   }finally{await browser.close();}

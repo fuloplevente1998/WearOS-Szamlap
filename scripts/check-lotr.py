@@ -40,4 +40,8 @@ for i,(name,provider,slot) in enumerate(zip(names,providers,slots)):
     assert hypot(x+w/2-225,y+h/2-225)+max(w,h)/2 < 190
 info = ET.parse(root / "lotrwatchface/src/main/res/xml/watch_face_info.xml").getroot()
 assert info.find("Editable").get("value") == "true"
+assert info.find("Preview").get("value") == "@drawable/lotr_preview"
+manifest = ET.parse(root / "lotrwatchface/src/main/AndroidManifest.xml").getroot()
+android_ns = "{http://schemas.android.com/apk/res/android}"
+assert manifest.find("application").get(android_ns + "icon") == "@drawable/lotr_preview"
 print("PASS: Five independently editable native LOTR complication slots, safe bounds and no synthetic readings")
